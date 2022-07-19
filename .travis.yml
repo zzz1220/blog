@@ -1,12 +1,18 @@
+sudo: false
 language: node_js
 node_js:
-  - "10"
-before_script:
-  - npm install
-  - git config user.name "zzz1220"
-  - git config user.email "18352539920@163.com"
-  - sed -i'' "s~https://github.com/zzz1220/zzz1220.github.io.git~https://${gh_token}@github.com/zzz1220/zzz1220.github.io.git~" _config.yml
+  - 10 # use nodejs v10 LTS
+cache: npm
+branches:
+  only:
+    - master # build master branch only
 script:
-  - hexo generate
-  - gulp
-  - hexo deploy
+  - hexo generate # generate static files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  local-dir: public
