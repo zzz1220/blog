@@ -162,10 +162,10 @@ pwa:
       name: hexo
       short_name: hexo
       icons:
-        - src: /images/android-chrome-192x192.png
+        - src: /source/images/icon-192x192.png
           sizes: 192x192
           type: image/png
-        - src: /images/android-chrome-512x512.png
+        - src: /source/images/icon-512x512.png
           sizes: 512x512
           type: image/png
       start_url: /index.html
