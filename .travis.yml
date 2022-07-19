@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "10"
+before_script:
+  - npm install
+  - git config user.name "x1nes"
+  - git config user.email "18352539920@163.com"
+  - sed -i'' "s~https://github.com/x1nes/blog.git~https://${gh_token}@github.com/x1nes/blog.git~" _config.yml
+script:
+  - hexo generate
+  - gulp
+  - hexo deploy

@@ -1,0 +1,92 @@
+阮一峰的网络日志:
+    link: http://www.ruanyifeng.com/
+    avatar: http://www.ruanyifeng.com/blog/images/person2_s.jpg
+    descr: "宝藏博客,翻译了很多技术文章"
+
+廖雪峰的官方网站:
+    link: https://www.liaoxuefeng.com/
+    avatar: https://tva2.sinaimg.cn/crop.0.1.635.635.50/62d8efadgw1ej30downrsj20hs0hq0ws.jpg?KID=imgbed,tva&Expires=1617480102&ssig=mHLY134OeK
+    descr: "各种语言教程,免费的"
+
+掘金:
+    link: https://juejin.cn/
+    avatar: /blog/links/logo/juejin.jpg
+    descr: "很活跃的技术论坛"
+
+codePen:
+    link: https://codepen.io/
+    avatar: https://image.flaticon.com/icons/png/512/2111/2111501.png
+    descr: "前端艺术家的show"
+     
+oi-wiki:
+    link: https://oi-wiki.org/ 
+    avatar: https://oi-wiki.org/intro/images/alipay.png
+    descr: "编程竞赛知识整合站" 
+
+书栈网:
+    link: https://www.bookstack.cn/
+    avatar: /blog/links/logo/shuzhan.png
+    descr: "好多电子书"
+
+vue:
+    link: https://vuejs.org/
+    avatar: https://vuejs.org/images/logo.png
+    descr: vue官方文档
+
+webpack:
+    link: https://webpack.docschina.org/
+    avatar: https://camo.githubusercontent.com/b0573f87b0786eda63c76f2a9a1358e7a653783c25c03c6c908a00b70c713d78/68747470733a2f2f7765627061636b2e6a732e6f72672f6173736574732f69636f6e2d7371756172652d6269672e737667
+    descr: "webpack官方文档"  
+
+cssBattle:
+    link: https://cssbattle.dev/
+    avatar: https://pbs.twimg.com/profile_images/1114446136302084096/BIu19jPP_400x400.png    
+    descr: "css挑战"    
+
+MDN: 
+    link: https://developer.mozilla.org/zh-CN/
+    avatar: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQInKWvvpzGOkyO3xVm6ldkKx9lPu0SCyY23Q&usqp=CAU
+    descr: "web最全文档"
+
+力扣:
+    link: https://leetcode-cn.com/
+    avatar: /blog/links/logo/leetcode.png
+    descr: "算法练习"  
+
+ecma:
+    link: https://tc39.es/ecma262/#sec-new-operator
+    avatar: /blog/links/logo/ecma.png
+    descr: "javaScript秘密所在"
+   
+npmtrends:
+    link: https://www.npmtrends.com/
+    avatar: https://www.npmtrends.com/images/logos/npm_trends_logo.png
+    descr: "npm包在线对比"   
+    
+stackoverflow:
+    link: https://stackoverflow.com/
+    avatar: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/768px-Stack_Overflow_icon.svg.png
+    descr: "编程问答社区"    
+
+牛客:
+    link: https://www.nowcoder.com/
+    avatar: /blog/links/logo/niuke.jpg
+    descr: "毕业刷题找工作"
+
+codeTop:
+    link: https://codetop.cc/
+    avatar: /blog/links/logo/codeTop.png
+    descr: "互联网大厂面试的高频考题"   
+   
+花花酱的博客:
+    link: https://zxi.mytechroad.com/blog/
+    avatar: /blog/links/logo/huahua.jpg
+    descr: "花花酱的博客"   
+    
+ColorHunt:
+    link: https://colorhunt.co/
+    avatar: /blog/links/logo/colorhunt.png
+    descr: "预设色彩搭配"  
+   
+   
+    
