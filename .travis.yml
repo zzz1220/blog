@@ -3,9 +3,9 @@ node_js:
   - "10"
 before_script:
   - npm install
-  - git config user.name "x1nes"
+  - git config user.name "zzz1220"
   - git config user.email "18352539920@163.com"
-  - sed -i'' "s~https://github.com/x1nes/blog.git~https://${gh_token}@github.com/x1nes/blog.git~" _config.yml
+  - sed -i'' "s~https://github.com/zzz1220/blog.git~https://${gh_token}@github.com/zzz1220/blog.git~" _config.yml
 script:
   - hexo generate
   - gulp

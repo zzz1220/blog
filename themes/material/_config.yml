@@ -173,7 +173,7 @@ sns:
   weibo: 
   instagram:
   tumblr:
-  github: https://github.com/x1nes
+  github: https://github.com/zzz1220
   linkedin:
   zhihu:
   bilibili:
@@ -259,7 +259,7 @@ sidebar:
 # If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
   use: gitalk
-  shortname: x1nes-1
+  shortname: zzz1220-1
   changyan_appid:
   changyan_conf:
   changyan_thread_key_type: path
@@ -278,7 +278,7 @@ comment:
   valine_placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
   valine_guest_info: nick,mail,link #valine comment header info
   gitalk_repo: gitTalkBuck
-  gitalk_owner: x1nes
+  gitalk_owner: zzz1220
   gitalk_client_id: 7047f32466c59bed6274
   gitalk_client_secret: 50030c1dc4654f2f10f8df23b3a084692a8ce248
   wildfire_database_provider: firebase # firebase or wilddog

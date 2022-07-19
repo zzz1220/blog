@@ -7,7 +7,7 @@ title: simmyo_z的博客
 subtitle:
 description:
 keywords: 博客 前端 bolg javascript web
-author: x1nes
+author: zzz1220
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -16,7 +16,7 @@ server:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://x1nes.github.io/
+url: https://zzz1220.github.io/
 root: /
 # permalink: :year/:month/:day/:title/
 permalink: posts/:abbrlink/
@@ -86,7 +86,7 @@ theme: material
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/x1nes/blog.git
+  repo: https://github.com/zzz1220/zzz1220.github.io
   branch: gh-pages
 
 live2d:
