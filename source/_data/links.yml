@@ -10,7 +10,7 @@
 
 掘金:
     link: https://juejin.cn/
-    avatar: /blog/links/logo/juejin.jpg
+    avatar: /links/logo/juejin.jpg
     descr: "很活跃的技术论坛"
 
 codePen:
@@ -25,7 +25,7 @@ oi-wiki:
 
 书栈网:
     link: https://www.bookstack.cn/
-    avatar: /blog/links/logo/shuzhan.png
+    avatar: /links/logo/shuzhan.png
     descr: "好多电子书"
 
 vue:
@@ -50,12 +50,12 @@ MDN:
 
 力扣:
     link: https://leetcode-cn.com/
-    avatar: /blog/links/logo/leetcode.png
+    avatar: /links/logo/leetcode.png
     descr: "算法练习"  
 
 ecma:
     link: https://tc39.es/ecma262/#sec-new-operator
-    avatar: /blog/links/logo/ecma.png
+    avatar: /links/logo/ecma.png
     descr: "javaScript秘密所在"
    
 npmtrends:
@@ -70,22 +70,22 @@ stackoverflow:
 
 牛客:
     link: https://www.nowcoder.com/
-    avatar: /blog/links/logo/niuke.jpg
+    avatar: /links/logo/niuke.jpg
     descr: "毕业刷题找工作"
 
 codeTop:
     link: https://codetop.cc/
-    avatar: /blog/links/logo/codeTop.png
+    avatar: /links/logo/codeTop.png
     descr: "互联网大厂面试的高频考题"   
    
 花花酱的博客:
-    link: https://zxi.mytechroad.com/blog/
-    avatar: /blog/links/logo/huahua.jpg
+    link: https://zxi.mytechroad.com/
+    avatar: /links/logo/huahua.jpg
     descr: "花花酱的博客"   
     
 ColorHunt:
     link: https://colorhunt.co/
-    avatar: /blog/links/logo/colorhunt.png
+    avatar: /links/logo/colorhunt.png
     descr: "预设色彩搭配"  
    
    

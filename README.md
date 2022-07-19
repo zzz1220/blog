@@ -1,6 +1,6 @@
-<img src="https://travis-ci.org/zzz1220/blog.svg?branch=master"/>
+<img src="https://travis-ci.org/zzz1220/zzz1220.github.io.svg?branch=master"/>
 
-# blog
+# zzz1220.github.io
 
 博客源码
 基于 hexo
