@@ -28,4 +28,4 @@ jobs:
         run: | 
           hexo clean
           hexo generate
-          hexo hexo deploy -g
+          hexo deploy -g
