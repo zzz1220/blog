@@ -1,29 +1,39 @@
-name: deploy_my_blog
-on: [push]
+name: Deployment
+on: push
+
 jobs:
-  build_and_deploy:
+  deployment:
     runs-on: ubuntu-latest
+    name: Deployment
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Check Out
+        uses: actions/checkout@v3
+
+      - name: Clone Repo
+        uses: actions/checkout@v3
         with:
-          node-version: '13'
-      - name: Prepare ssh env
+          repository: Username/Repository
+          path: .deploy_git
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 13
+
+      - name: Setup Git
+        run: |
+          git config --global user.name "zzz1220"
+          git config --global user.email "13005465120@163.com"
+
+      - name: Setup SSH Key
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_DEPLOY_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 'github.com' >> ~/.ssh/known_hosts          
-        env:
-          SSH_DEPLOY_KEY: ${{ secrets.MY_BLOG_DEPLOY_KEY }}
-      - name: Prepare hexo and npm env
-        run: |
-          npm install          
-      - name: Prepare git env
-        run: |
-          git config --global user.email 13005465120@163.com
-          git config --global user.name zzz1220      
-      - name: Deploy Blog
-        run: | 
-          npm run deploy
+          echo "${{ secrets.MY_BLOG_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
 
+      - name: Deploy
+        run: |
+          npm install --location=global hexo-cli
+          npm install
+          hexo d
