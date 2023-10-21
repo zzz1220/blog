@@ -27,5 +27,5 @@ jobs:
       - name: Deploy Blog
         run: | 
           hexo clean
-          hexo g
-          hexo d
+          hexo generate
+          hexo hexo deploy -g
