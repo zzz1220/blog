@@ -18,7 +18,6 @@ jobs:
           SSH_DEPLOY_KEY: ${{ secrets.MY_BLOG_DEPLOY_KEY }}
       - name: Prepare hexo and npm env
         run: |
-          npm install -g hexo-cli
           npm install          
       - name: Prepare git env
         run: |
@@ -26,6 +25,5 @@ jobs:
           git config --global user.name zzz1220      
       - name: Deploy Blog
         run: | 
-          hexo clean
-          hexo generate
-          hexo deploy -g
+          npm run deploy
+
