@@ -7,33 +7,31 @@ jobs:
     name: Deployment
 
     steps:
-      - name: Check Out
-        uses: actions/checkout@v3
+      # - name: Check Out
+      #   uses: actions/checkout@v3
 
-      - name: Clone Repo
-        uses: actions/checkout@v3
-        with:
-          repository: Username/Repository
-          path: .deploy_git
+      # - name: Clone Repo
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: Username/Repository
+      #     path: .deploy_git
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 13
+      # - name: Setup Node
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 13
 
-      - name: Setup Git
+      # - name: Setup Git
+      #   run: |
+      #     git config --global user.name "zzz1220"
+      #     git config --global user.email "13005465120@163.com"
+
+      # - name: Setup SSH Key
+      #   run: |
+      #     mkdir -p ~/.ssh
+      #     echo "${{ secrets.MY_BLOG_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
+      #     chmod 600 ~/.ssh/id_ed25519
+
+      - name: Test
         run: |
-          git config --global user.name "zzz1220"
-          git config --global user.email "13005465120@163.com"
-
-      - name: Setup SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.MY_BLOG_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-
-      - name: Deploy
-        run: |
-          npm install --location=global hexo-cli
-          npm install
-          hexo d
+          echo "this is a test step"
