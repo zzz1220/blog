@@ -52,5 +52,8 @@
     "gulp-uglify": "^3.0.2",
     "husky": "^3.0.1",
     "lint-staged": "^9.2.0"
+  },
+  "volta": {
+    "node": "13.14.0"
   }
 }
