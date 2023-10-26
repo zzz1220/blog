@@ -32,7 +32,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-  slogan: "时间都去哪儿了"
+  slogan: "programer, js, ts, react, vue"
   theme_color: "#0097A7"
   theme_sub_color: "#00838F"
   hyperlink_color: "#00838F"
@@ -69,7 +69,7 @@ background:
 
 # Images Settings
 img:
-  logo: "/img/logo.jpg"
+  logo: "/img/logo.jpeg"
   avatar: "/img/avatar.jpeg"
   daily_pic: "/img/daily_pic.jpg"
   sidebar_header: "/img/sidebar_header.jpg"
