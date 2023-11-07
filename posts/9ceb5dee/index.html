@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            教练,我想学webSocket | 
+        
+        simmyo_z的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,webSocket">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?uVzgA6RLrOm13Ukw8Qgy+A==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="simmyo_z的博客">
+    <meta name="msapplication-starturl" content="https://zzz1220.github.io/posts/9ceb5dee/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="simmyo_z的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://zzz1220.github.io/posts/9ceb5dee/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="教练,我想学webSocket | simmyo_z的博客">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="webSocket"> 
+
+    
+        <meta property="article:published_time" content="Thu Feb 08 2018 00:00:00 GMT+0800">
+        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://zzz1220.github.io/posts/9ceb5dee/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://zzz1220.github.io/posts/9ceb5dee/index.html",
+    "headline": "教练,我想学webSocket",
+    "datePublished": "Thu Feb 08 2018 00:00:00 GMT+0800",
+    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "zzz1220",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.jpeg"
+        },
+        "description": "programer, js, ts, react, vue"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "simmyo_z的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",webSocketblog 前端 javascript 算法 日志 css html",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-145111272-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是webSocket-？"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶什么是webSocket ？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#怎么做到的"><span class="post-toc-number">2.</span> <span class="post-toc-text">¶怎么做到的 ?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">¶http:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WebSocket"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">¶WebSocket</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#客户端例子"><span class="post-toc-number">3.</span> <span class="post-toc-text">¶客户端例子</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#api"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">¶api:</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#服务端"><span class="post-toc-number">4.</span> <span class="post-toc-text">¶服务端</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 42 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                教练,我想学webSocket
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>zzz1220</strong>
+        <span>2月 08, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACW0lEQVR42u3a0W7DIAwF0Pz/T2+vk6qm13ZArDo8VZsaOEwi7NrXz1ePCw8PDw8PDw8P7zDeFY/Xb72d4M9vXz/nczXXhoeHh7eF9+GofcNLkDn1fmsKa8PDw8PbyJtM2VtW8mLI14aHh4d3Pi+/WPe2Bg8PD++bePlP7kl55IGHh4d3Jq8ayyahQw4+ImvBw8PDi3nVotTOz1vre3h4eHgBr9zSFE+TL3dh0xUeHh7eAl5+EOfNAZNnTrYSDw8Pbw+vutBqINtrS52sCg8PD2817/7L1RLX5MKdtx18eCYeHh7eYl4Cq74G8tJXspXVIAMPDw9vNW8evyaHeN6sUG3hanZG4OHh4S3gTQr81ct6dSPKnRF4eHh4j/KSeLS60GQR8yv76D8GPDw8vDEvikfHpLyUlQfKeHh4ePt51XAhbx0oH+hFaiGMwMPDw3uU1wtz50/IL9N5oIyHh4e3kze5Ok8aEfKrdvJqwcPDw9vJi/7JHwQNkxaBKxh4eHh45/DyYzqauNcKELDx8PDwdvKeakvNF11tPiiHznh4eHjbeb2LbA7ulcSSVwgeHh7eft68fFVdev6cZgEMDw8PbzEvL3RNIoNeUHv/Z8DDw8PbyauOZJpJyJu3F0RhBB4eHt4C3vxQbl58i81VzaYrPDw8vGW83kGfL2veqtVsusLDw8NbzEuaBpIoodcQMCm84eHh4f0v3opGhOoW4OHh4Z3PS0KHZ+OMQtCMh4eHt5E3D2qrpGrIuzzGxcPDw1tQAKtS5xFtFYmHh4e3mvd9Aw8PDw8PDw8P74DxC7IA9xMydPYAAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/webSocket/">webSocket</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=教练,我想学webSocket&url=https://zzz1220.github.io/posts/9ceb5dee/index.html&pic=https://zzz1220.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=教练,我想学webSocket&url=https://zzz1220.github.io/posts/9ceb5dee/index.html&via=zzz1220" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://zzz1220.github.io/posts/9ceb5dee/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://zzz1220.github.io/posts/9ceb5dee/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=simmyo_z的博客&title=教练,我想学webSocket&summary=&pics=https://zzz1220.github.io/img/favicon.png&url=https://zzz1220.github.io/posts/9ceb5dee/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+<div style="padding-left:3rem;font-size: 1rem;">
+    👉👉本文共<span class="post-count">1.9k</span>字📘
+    读完共需<span class="post-count">7</span>分钟⌚
+</div>
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>html5里,我最感兴趣的两个部分一个是canvas,因为可以实现在页面上画画,基于webgl的技术在未来网页游戏上一定会大放异彩,而另外一部分,就是webSocket了。<strong>但是实际上websocket不是HTML5 的东西</strong>。它是一个协议,归属于IETF。HTML5只是提供了WebSocket API ，两个规范是独立发布的。</p>
+</blockquote>
+<h2 id="什么是webSocket-？"><a class="header-anchor" href="#什么是webSocket-？">¶</a>什么是webSocket ？</h2>
+<p>WebSocket是一种网络通讯协议,目前市面上很多网站都用到了这项技术,比如在线聊天室,在线客服系统,还有一些评论系统,WebIM等。它的特点就是：持久化,实时性,客户端和服务端双向通讯。<br>
+为什么需要webSocket呢？相信很多程序员都遇到过这样类似的需求----实时的显示物品的价格、股票走势的图标、网页上实现聊天等交互功能。这些需求如果用http协议,只能客户端发请求,服务端返回结果,就需要不停的&quot;轮询&quot;：每隔一段时候，就发出一个询问，了解服务器有没有新的信息。轮询的效率很低,并且浪费资源,需要服务器有很快的处理速度和资源。另外还有一种长连接的方式（long poll）,是阻塞式的ajax,一次请求直到有结果返回才会进行下一次请求,这种方式需要服务器高并发能力。</p>
+<p>而WebSocket就是一个很好的解决方案。</p>
+<h2 id="怎么做到的"><a class="header-anchor" href="#怎么做到的">¶</a>怎么做到的 ?</h2>
+<p>WebSocket基于HTTP协议,借用HTTP的协议完成一部分握手。<br>
+在握手阶段是一样的。</p>
+<p>下面是WebSocket的握手（如果你经常看htpp的包,就很容易看懂下面的东西）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET /chat HTTP/1.1</span><br><span class="line">Host: server.example.com</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==</span><br><span class="line">Sec-WebSocket-Protocol: chat, superchat</span><br><span class="line">Sec-WebSocket-Version: 13</span><br><span class="line">Origin: http://example.com</span><br></pre></td></tr></table></figure>
+<p>这里比HTTP多了几个东西</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br></pre></td></tr></table></figure>
+<p>这两行会告诉服务器：这是一个WebSocket协议,请用对应的模块处理。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==</span><br><span class="line">Sec-WebSocket-Protocol: chat, superchat</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure>
+<p>Sec-WebSocket-Key 是一个Base64 encode的值，这个是浏览器随机生成的密文,要求服务端必须返回一个对应的加密Sec-WebSocket-Accept应答,否则客户端会抛出Error during WebSocket handshake错误，并关闭连接。<br>
+Sec-WebSocket-Protocol 是一个用户定义的字符串，用来区分同URL下，不同的服务所需要的协议。<br>
+Sec-WebSocket-Version 是告诉服务器所使用的Websocket Draft(协议版本),现在都是13。</p>
+<p>然后服务器会返回下列东西，表示已经接受到请求， 成功建立Websocket啦！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=</span><br><span class="line">Sec-WebSocket-Protocol: chat</span><br></pre></td></tr></table></figure>
+<p>这样就是websocket链接成功,接下来就可以不用request和response愉快的收发数据了。<br>
+不同的服务端有不同语言的实现方式,而在客户端通常使用js或者其他封装库。</p>
+<p>对比一下HTTP和WebSocket,是这样的~~</p>
+<h3 id="http"><a class="header-anchor" href="#http">¶</a>http:</h3>
+<p>客户端：现在比特币价格多少！<br>
+服务端：20000刀！<br>
+10s后<br>
+客户端：现在比特币价格多少！<br>
+服务端：18000刀！<br>
+开始轮询~~~<br>
+客户端：现在比特币价格多少！<br>
+0.5s后<br>
+客户端：现在比特币价格多少！<br>
+0.5s后<br>
+客户端：现在比特币价格多少！<br>
+服务端：19000刀<br>
+服务端：19000刀<br>
+服务端：@%#……&amp;@<em>……</em>#*（内心os:累死我了，不干了！）</p>
+<h3 id="WebSocket"><a class="header-anchor" href="#WebSocket">¶</a>WebSocket</h3>
+<p>奥义–websocket链接！！<br>
+客户端：要是比特币价格变了及时告诉我。<br>
+服务端：ok，没问题。<br>
+服务端：惊天大消息，比特币暴跌！<br>
+客户端：不慌不慌,继续加仓。<br>
+20s后<br>
+服务端：涨了！涨了！<br>
+客户端：还会再涨，加仓，拉满。</p>
+<p>总结就是：<br>
+1  建立在 TCP 协议之上，服务器端的实现比较容易。<br>
+2  与 HTTP 协议有着良好的兼容性。默认端口也是80和443，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。<br>
+3  数据格式比较轻量，性能开销小，通信高效。<br>
+4  可以发送文本，也可以发送二进制数据。<br>
+5  没有同源限制，客户端可以与任意服务器通信。<br>
+6  协议标识符是ws（如果加密，则为wss），服务器网址就是 URL。</p>
+<h2 id="客户端例子"><a class="header-anchor" href="#客户端例子">¶</a>客户端例子</h2>
+<p>在客户端,webSocket使用起来很简单</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ws = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(<span class="string">&quot;wss://echo.websocket.org&quot;</span>);</span><br><span class="line"></span><br><span class="line">ws.<span class="property">onopen</span> = <span class="keyword">function</span>(<span class="params">evt</span>) &#123; </span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Connection open ...&quot;</span>); </span><br><span class="line">  ws.<span class="title function_">send</span>(<span class="string">&quot;Hello WebSockets!&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ws.<span class="property">onmessage</span> = <span class="keyword">function</span>(<span class="params">evt</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="string">&quot;Received Message: &quot;</span> + evt.<span class="property">data</span>);</span><br><span class="line">  ws.<span class="title function_">close</span>();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ws.<span class="property">onclose</span> = <span class="keyword">function</span>(<span class="params">evt</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Connection closed.&quot;</span>);</span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
+<p>初中英语都能看懂是什么意思,就不解释了。<br>
+另外还有常用的webSocket库,<a href="http://xn--socket-hh4k.io">如socket.io</a>。</p>
+<h3 id="api"><a class="header-anchor" href="#api">¶</a>api:</h3>
+<p>webSocket.readyState readyState属性返回实例对象的当前状态,0:表示正在连接;1,表示连接成功;<br>
+2，表示连接正在关闭;3，表示连接已经关闭，或者打开连接失败。<br>
+webSocket.onopen 用于指定连接成功后的回调函数。<br>
+webSocket.onclose 用于指定连接关闭后的回调函数。<br>
+webSocket.onmessage 用于指定收到服务器数据后的回调函数。<br>
+webSocket.send() 用于向服务器发送数据。<br>
+webSocket.bufferedAmount 表示还有多少字节的二进制数据没有发送出去。<br>
+webSocket.onerror  用于指定报错时的回调函数。<br>
+以上api仅简单介绍。详情参照官方<br>
+<strong><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket">文档</a></strong></p>
+<h2 id="服务端"><a class="header-anchor" href="#服务端">¶</a>服务端</h2>
+<p>基本上支持网络编程的语言都可以创建webSocket服务,比如java,php,python,node等，网上都有解决方案。<br>
+下面是用python写的服务端代码,只用到了一些网络模块,方便熟悉webSocket协议内容和步骤</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> simplejson</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">HOST = <span class="string">&#x27;127.0.0.1&#x27;</span></span><br><span class="line">PORT = <span class="number">9000</span></span><br><span class="line">MAGIC_STRING = <span class="string">&#x27;258EAFA5-E914-47DA-95CA-C5AB0DC85B11&#x27;</span></span><br><span class="line">HANDSHAKE_STRING = <span class="string">&quot;HTTP/1.1 101 Switching Protocols\r\n&quot;</span> \</span><br><span class="line">    <span class="string">&quot;Upgrade:WebSocket\r\n&quot;</span> \</span><br><span class="line">    <span class="string">&quot;Connection: Upgrade\r\n&quot;</span> \</span><br><span class="line">    <span class="string">&quot;Sec-WebSocket-Accept: &#123;1&#125;\r\n&quot;</span> \</span><br><span class="line">    <span class="string">&quot;WebSocket-Location: ws://&#123;2&#125;/chat\r\n&quot;</span> \</span><br><span class="line">    <span class="string">&quot;WebSocket-Protocol:chat\r\n\r\n&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">parse_data</span>(<span class="params">msg</span>):</span><br><span class="line">    v = <span class="built_in">ord</span>(msg[<span class="number">1</span>]) &amp; <span class="number">0x7f</span></span><br><span class="line">    <span class="keyword">if</span> v == <span class="number">0x7e</span>:</span><br><span class="line">        p = <span class="number">4</span></span><br><span class="line">    <span class="keyword">elif</span> v == <span class="number">0x7f</span>:</span><br><span class="line">        p = <span class="number">10</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        p = <span class="number">2</span></span><br><span class="line"></span><br><span class="line">    mask = msg[p:p+<span class="number">4</span>]</span><br><span class="line">    data = msg[p+<span class="number">4</span>:]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&#x27;</span>.join([<span class="built_in">chr</span>(<span class="built_in">ord</span>(v) ^ <span class="built_in">ord</span>(mask[k%<span class="number">4</span>])) <span class="keyword">for</span> k, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(data)])</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">start</span>():</span><br><span class="line">    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</span><br><span class="line">    sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        sock.bind((HOST, PORT))</span><br><span class="line">        sock.listen(<span class="number">100</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bind error&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(e)</span><br><span class="line">        sys.exit()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        conn, add = sock.accept()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            handshake(conn)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;finally&#x27;</span>)</span><br><span class="line">            conn.close()</span><br><span class="line"></span><br><span class="line">    sock.close()</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">handshake</span>(<span class="params">conn</span>):</span><br><span class="line">    headers = &#123;&#125;</span><br><span class="line">    shake = conn.recv(<span class="number">1024</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span> shake</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">len</span>(shake):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;len error&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    header, data = shake.split(<span class="string">&#x27;\r\n\r\n&#x27;</span>, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> header.split(<span class="string">&#x27;\r\n&#x27;</span>)[<span class="number">1</span>:]:</span><br><span class="line">        key, value = line.split(<span class="string">&#x27;: &#x27;</span>, <span class="number">1</span>)</span><br><span class="line">        headers[key] = value</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;Sec-WebSocket-Key&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> headers:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;this is not websocket, client close.&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span> headers</span><br><span class="line">        conn.close()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    sec_key = headers[<span class="string">&#x27;Sec-WebSocket-Key&#x27;</span>]</span><br><span class="line">    res_key = base64.b64encode(hashlib.sha1(sec_key + MAGIC_STRING).digest())</span><br><span class="line"></span><br><span class="line">    str_handshke = HANDSHAKE_STRING.replace(<span class="string">&#x27;&#123;1&#125;&#x27;</span>, res_key).replace(<span class="string">&#x27;&#123;2&#125;&#x27;</span>, HOST + <span class="string">&quot;:&quot;</span> + <span class="built_in">str</span>(PORT))</span><br><span class="line">    <span class="built_in">print</span> str_handshke</span><br><span class="line"></span><br><span class="line">    conn.send(str_handshke)</span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    conn.send(<span class="string">&#x27;%c%c%s&#x27;</span> % (<span class="number">0x81</span>, <span class="number">6</span>, <span class="string">&#x27;suren1&#x27;</span>))</span><br><span class="line">    msg = conn.recv(<span class="number">1024</span>)</span><br><span class="line">    msg = parse_data(msg)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;msg : &#x27;</span> + msg)</span><br><span class="line"></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    conn.send(<span class="string">&#x27;%c%c%s&#x27;</span> % (<span class="number">0x81</span>, <span class="number">6</span>, <span class="string">&#x27;suren2&#x27;</span>))</span><br><span class="line">    msg = conn.recv(<span class="number">1024</span>)</span><br><span class="line">    msg = parse_data(msg)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;msg : &#x27;</span> + msg)</span><br><span class="line"></span><br><span class="line">    time.sleep(<span class="number">1</span>)</span><br><span class="line">    conn.send(<span class="string">&#x27;%c%c%s&#x27;</span> % (<span class="number">0x81</span>, <span class="number">6</span>, <span class="string">&#x27;suren3&#x27;</span>))</span><br><span class="line">    msg = conn.recv(<span class="number">1024</span>)</span><br><span class="line">    msg = parse_data(msg)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;msg : &#x27;</span> + msg)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        start()</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(e)</span><br></pre></td></tr></table></figure>
+<p>参考：<br>
+（1）<a href="http://www.ruanyifeng.com/blog/2017/05/websocket.html">WebSocket 教程</a><br>
+（2）<a href="https://www.zhihu.com/question/20215561">知乎–WebSocket 是什么原理？为什么可以实现持久连接？</a><br>
+（3）<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebSocket">webApi接口|mdn</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '7047f32466c59bed6274',
+            clientSecret: '50030c1dc4654f2f10f8df23b3a084692a8ce248',
+            repo: 'gitTalkBuck',
+            owner: 'zzz1220',
+            admin: ['zzz1220'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/posts/c475ea5/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/posts/2b34be88/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+<script>
+    (function initVisibilitychange() {
+        var title = document.title 
+        var key
+        document.addEventListener('visibilitychange', function() {
+            if(document.visibilityState === 'visible') {
+                document.title = "骗你的~~"
+                key = setTimeout(() => {
+                    document.title = title
+                },1500)
+            }else {
+                clearTimeout(key)
+                document.title = "糟糕~chrome崩溃了~~~"
+            }
+        })
+    })()
+    </script>
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.jpeg" alt="zzz1220's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/11/">十一月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="相册">
+                
+                    <i class="material-icons sidebar-material-icons">photo</i>
+                
+                相册
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/books" title="书单">
+                
+                    <i class="material-icons sidebar-material-icons">books</i>
+                
+                书单
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/movies" title="电影">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                电影
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/games" title="游戏">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                游戏
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="链接">
+                
+                    <i class="material-icons sidebar-material-icons">linkify</i>
+                
+                链接
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">32</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar friend  -->
+        <!-- 友链页面 -->
+
+<style>
+.mdl-card.sidebar-card_friend{
+    padding: 20px;
+    width:auto;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.mdl-card.sidebar-card_friend h6{
+    height: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: Roboto, "Helvetica Neue";
+    margin: 0 auto;
+}
+.mdl-card.sidebar-card_friend a{
+    color: black;
+    text-decoration-line: none;
+    font-family: Roboto, "Helvetica Neue";
+    width:fit-content;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    white-space: nowrap;
+    word-break: keep-all;
+    margin: 8px 4px;
+    font-size: 13px;
+}
+.mdl-card.sidebar-card_friend a:hover {
+    color: #00838F;
+}
+.mdl-card.sidebar-card_friend a::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #00838F;
+    left:-8px;
+    top:8px;
+}
+#friend-content{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+</style>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/zzz1220" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;simmyo_z的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?zvSPHDkEskkA20yxZY14lg==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?j10x2vnLBvyUc9TVmIDKCg==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+            <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
+        <script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1699344494984')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+    
+</html>

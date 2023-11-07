@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><link rel=manifest href=/manifest.json><meta name="generator" content="Hexo 3.9.0"><link rel="manifest" href="/manifest.json">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+
+
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            promiseA+ | 
+        
+        simmyo_z的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" href="/img/favicon.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,javaScript">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?uVzgA6RLrOm13Ukw8Qgy+A==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+            
+                <style id="prettify_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_css","/css/prettify.min.css?zp8STOU9v89XWFEnN+6YmQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+                <style id="prettify_theme"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("prettify_theme","/css/prettify/github-v2.min.css?AfzKxt++K+/lhZBlSjnxwg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+            
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?ezyEvm8ST5CGfpA+kFFi1g==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="simmyo_z的博客">
+    <meta name="msapplication-starturl" content="https://zzz1220.github.io/posts/d721f59f/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="simmyo_z的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://zzz1220.github.io/posts/d721f59f/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="promiseA+ | simmyo_z的博客">
+    <meta property="og:image" content="/img/favicon.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="javaScript"> 
+
+    
+        <meta property="article:published_time" content="Tue Apr 06 2021 23:36:55 GMT+0800">
+        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://zzz1220.github.io/posts/d721f59f/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://zzz1220.github.io/posts/d721f59f/index.html",
+    "headline": "promiseA+",
+    "datePublished": "Tue Apr 06 2021 23:36:55 GMT+0800",
+    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "zzz1220",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.jpeg"
+        },
+        "description": "programer, js, ts, react, vue"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "simmyo_z的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",javaScriptblog 前端 javascript 算法 日志 css html",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-145111272-1', 'auto');ga('send', 'pageview');
+</script>
+    
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 42 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                promiseA+
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.jpeg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>zzz1220</strong>
+        <span>4月 06, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZUlEQVR42u3aS27DMAwFwNz/0u22QBH5kfrYCcaroHBljRYS8ajXz1c/Lzw8PDw8PDw8vIfxXvHz9/2LD7x5v/et/H08PDy8k7zedP9PYkwaj/9u5HxueHh4eOd5M4fBeCsfjz9euOrc8PDw8J7Gq1KTjT75Fh4eHt7n8nol77iwxsPDw/tcXnWLH/89h80vHx4eHt55Xq8Bdub3bf09PDw8vDe86pOXub0CPQ873s4QDw8PbzNv3ObPj4fkL0lIkfzXRVmPh4eHd4TXm2LvukB1EfMjBw8PD+8Mr7oF58dDHjpUo+FCjIuHh4e3gZdMsVpw92B5/HFxUOHh4eFt5uVhQaEFNY1Jjg08PDy85/DmQ9XeZan8ohUeHh7evbx8KnlbKx+hFxBfHC14eHh4m3kzxe5M5NoLhaN54uHh4R3h5c2n6jWpZLTqIYSHh4d3L68Xwkal7SJq0n7Dw8PDew5vJlqthg4546LgxsPDw9vM6zXAqoy8MZYfM3h4eHh38cbt/2oYUcX3fl+Mj4eHh3ec1yttk2VKIuM8XMbDw8O7i5fHCkk7Pz888jA3b8Xh4eHhneQlm3L1YkHvWkCPjYeHh3eS17soUH2zWprnS1aOcfHw8PCmeasaUb3QoXq9AA8PD+8JvF67a76YzuPgBVcH8PDw8DbwqpFuHq0m7GTrb8a4eHh4eJt5vfbVeFHWPgtuRuDh4eEd5yWlbTWSyEdb0ADDw8PDu5VXbWvti4bx8PDw7uLln+9djeqNs+zSFR4eHt5S3kwDLIl9q8dM9U08PDy8k7zve/Dw8PDw8PDw8B7w/AI5HO05sny1kgAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/javaScript/">javaScript</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=promiseA+&url=https://zzz1220.github.io/posts/d721f59f/index.html&pic=https://zzz1220.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=promiseA+&url=https://zzz1220.github.io/posts/d721f59f/index.html&via=zzz1220" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://zzz1220.github.io/posts/d721f59f/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://zzz1220.github.io/posts/d721f59f/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=simmyo_z的博客&title=promiseA+&summary=&pics=https://zzz1220.github.io/img/favicon.png&url=https://zzz1220.github.io/posts/d721f59f/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+<div style="padding-left:3rem;font-size: 1rem;">
+    👉👉本文共<span class="post-count">2.1k</span>字📘
+    读完共需<span class="post-count">9</span>分钟⌚
+</div>
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <blockquote>
+<p>JavaScript Promise A+ 规范</p>
+</blockquote>
+<p>译者序：一年前曾译过 Promise/A+ 规范，适时完全不懂 Promise 的思想，纯粹将翻译的过程当作学习，旧文译下来诘屈聱牙，读起来十分不顺畅。谁知这样一篇拙译，一年之间竟然点击数千，成为谷歌搜索的头条。今日在理解之后重译此规范，以飨读者。</p>
+<p>一个开放、健全且通用的 JavaScript Promise 标准。由开发者制定，供开发者参考。</p>
+<p>译文术语:</p>
+<p>解决（fulfill）：指一个 promise 成功时进行的一系列操作，如状态的改变、回调的执行。虽然规范中用 fulfill 来表示解决，但在后世的 promise 实现多以 resolve 来指代之。</p>
+<p>拒绝（reject）：指一个 promise 失败时进行的一系列操作。</p>
+<p>终值（eventual value）：所谓终值，指的是 promise 被解决时传递给解决回调的值，由于 promise 有一次性的特征，因此当这个值被传递时，标志着 promise 等待态的结束，故称之终值，有时也直接简称为值（value）。</p>
+<p>据因（reason）：也就是拒绝原因，指在 promise 被拒绝时传递给拒绝回调的值。</p>
+<p>实现:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Promise 实现 遵循promise/A+规范</span></span><br><span class="line"><span class="comment"> * Promise/A+规范译文:</span></span><br><span class="line"><span class="comment"> * https://malcolmyu.github.io/2015/06/12/Promises-A-Plus/#note-4</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// promise 三个状态</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PENDING</span> = <span class="string">&quot;pending&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">FULFILLED</span> = <span class="string">&quot;fulfilled&quot;</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">REJECTED</span> = <span class="string">&quot;rejected&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Promise</span>(<span class="params">excutor</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> that = <span class="variable language_">this</span>; <span class="comment">// 缓存当前promise实例对象</span></span><br><span class="line">    that.<span class="property">status</span> = <span class="variable constant_">PENDING</span>; <span class="comment">// 初始状态</span></span><br><span class="line">    that.<span class="property">value</span> = <span class="literal">undefined</span>; <span class="comment">// fulfilled状态时 返回的信息</span></span><br><span class="line">    that.<span class="property">reason</span> = <span class="literal">undefined</span>; <span class="comment">// rejected状态时 拒绝的原因</span></span><br><span class="line">    that.<span class="property">onFulfilledCallbacks</span> = []; <span class="comment">// 存储fulfilled状态对应的onFulfilled函数</span></span><br><span class="line">    that.<span class="property">onRejectedCallbacks</span> = []; <span class="comment">// 存储rejected状态对应的onRejected函数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">resolve</span>(<span class="params">value</span>) &#123; <span class="comment">// value成功态时接收的终值</span></span><br><span class="line">        <span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="title class_">Promise</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> value.<span class="title function_">then</span>(resolve, reject);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 为什么resolve 加setTimeout?</span></span><br><span class="line">        <span class="comment">// 2.2.4规范 onFulfilled 和 onRejected 只允许在 execution context 栈仅包含平台代码时运行.</span></span><br><span class="line">        <span class="comment">// 注1 这里的平台代码指的是引擎、环境以及 promise 的实施代码。实践中要确保 onFulfilled 和 onRejected 方法异步执行，且应该在 then 方法被调用的那一轮事件循环之后的新执行栈中执行。</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 调用resolve 回调对应onFulfilled函数</span></span><br><span class="line">            <span class="keyword">if</span> (that.<span class="property">status</span> === <span class="variable constant_">PENDING</span>) &#123;</span><br><span class="line">                <span class="comment">// 只能由pedning状态 =&gt; fulfilled状态 (避免调用多次resolve reject)</span></span><br><span class="line">                that.<span class="property">status</span> = <span class="variable constant_">FULFILLED</span>;</span><br><span class="line">                that.<span class="property">value</span> = value;</span><br><span class="line">                that.<span class="property">onFulfilledCallbacks</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">cb</span> =&gt;</span> <span class="title function_">cb</span>(that.<span class="property">value</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">reject</span>(<span class="params">reason</span>) &#123; <span class="comment">// reason失败态时接收的拒因</span></span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="comment">// 调用reject 回调对应onRejected函数</span></span><br><span class="line">            <span class="keyword">if</span> (that.<span class="property">status</span> === <span class="variable constant_">PENDING</span>) &#123;</span><br><span class="line">                <span class="comment">// 只能由pedning状态 =&gt; rejected状态 (避免调用多次resolve reject)</span></span><br><span class="line">                that.<span class="property">status</span> = <span class="variable constant_">REJECTED</span>;</span><br><span class="line">                that.<span class="property">reason</span> = reason;</span><br><span class="line">                that.<span class="property">onRejectedCallbacks</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">cb</span> =&gt;</span> <span class="title function_">cb</span>(that.<span class="property">reason</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 捕获在excutor执行器中抛出的异常</span></span><br><span class="line">    <span class="comment">// new Promise((resolve, reject) =&gt; &#123;</span></span><br><span class="line">    <span class="comment">//     throw new Error(&#x27;error in excutor&#x27;)</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="title function_">excutor</span>(resolve, reject);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="title function_">reject</span>(e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * resolve中的值几种情况：</span></span><br><span class="line"><span class="comment"> * 1.普通值</span></span><br><span class="line"><span class="comment"> * 2.promise对象</span></span><br><span class="line"><span class="comment"> * 3.thenable对象/函数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 对resolve 进行改造增强 针对resolve中不同值情况 进行处理</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;<span class="type">promise</span>&#125; promise2 promise1.then方法返回的新的promise对象</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;<span class="type">[type]</span>&#125; x         promise1中onFulfilled的返回值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;<span class="type">[type]</span>&#125; resolve   promise2的resolve方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;<span class="type">[type]</span>&#125; reject    promise2的reject方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">resolvePromise</span>(<span class="params">promise2, x, resolve, reject</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (promise2 === x) &#123; <span class="comment">// 如果从onFulfilled中返回的x 就是promise2 就会导致循环引用报错</span></span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">reject</span>(<span class="keyword">new</span> <span class="title class_">TypeError</span>(<span class="string">&#x27;循环引用&#x27;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> called = <span class="literal">false</span>; <span class="comment">// 避免多次调用</span></span><br><span class="line">    <span class="comment">// 如果x是一个promise对象 （该判断和下面 判断是不是thenable对象重复 所以可有可无）</span></span><br><span class="line">    <span class="keyword">if</span> (x <span class="keyword">instanceof</span> <span class="title class_">Promise</span>) &#123; <span class="comment">// 获得它的终值 继续resolve</span></span><br><span class="line">        <span class="keyword">if</span> (x.<span class="property">status</span> === <span class="variable constant_">PENDING</span>) &#123; <span class="comment">// 如果为等待态需等待直至 x 被执行或拒绝 并解析y值</span></span><br><span class="line">            x.<span class="title function_">then</span>(<span class="function"><span class="params">y</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="title function_">resolvePromise</span>(promise2, y, resolve, reject);</span><br><span class="line">            &#125;, <span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">                <span class="title function_">reject</span>(reason);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123; <span class="comment">// 如果 x 已经处于执行态/拒绝态(值已经被解析为普通值)，用相同的值执行传递下去 promise</span></span><br><span class="line">            x.<span class="title function_">then</span>(resolve, reject);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果 x 为对象或者函数</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (x != <span class="literal">null</span> &amp;&amp; ((<span class="keyword">typeof</span> x === <span class="string">&#x27;object&#x27;</span>) || (<span class="keyword">typeof</span> x === <span class="string">&#x27;function&#x27;</span>))) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123; <span class="comment">// 是否是thenable对象（具有then方法的对象/函数）</span></span><br><span class="line">            <span class="keyword">let</span> then = x.<span class="property">then</span>;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> then === <span class="string">&#x27;function&#x27;</span>) &#123;</span><br><span class="line">                then.<span class="title function_">call</span>(x, <span class="function"><span class="params">y</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (called) <span class="keyword">return</span>;</span><br><span class="line">                    called = <span class="literal">true</span>;</span><br><span class="line">                    <span class="title function_">resolvePromise</span>(promise2, y, resolve, reject);</span><br><span class="line">                &#125;, <span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">                    <span class="keyword">if</span> (called) <span class="keyword">return</span>;</span><br><span class="line">                    called = <span class="literal">true</span>;</span><br><span class="line">                    <span class="title function_">reject</span>(reason);</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// 说明是一个普通对象/函数</span></span><br><span class="line">                <span class="title function_">resolve</span>(x);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">            <span class="keyword">if</span> (called) <span class="keyword">return</span>;</span><br><span class="line">            called = <span class="literal">true</span>;</span><br><span class="line">            <span class="title function_">reject</span>(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="title function_">resolve</span>(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * [注册fulfilled状态/rejected状态对应的回调函数]</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;<span class="type">function</span>&#125; onFulfilled fulfilled状态时 执行的函数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span>  &#123;<span class="type">function</span>&#125; onRejected  rejected状态时 执行的函数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">function</span>&#125; newPromsie  返回一个新的promise对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">then</span> = <span class="keyword">function</span> (<span class="params">onFulfilled, onRejected</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> that = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">let</span> newPromise;</span><br><span class="line">    <span class="comment">// 处理参数默认值 保证参数后续能够继续执行</span></span><br><span class="line">    onFulfilled =</span><br><span class="line">        <span class="keyword">typeof</span> onFulfilled === <span class="string">&quot;function&quot;</span> ? onFulfilled : <span class="function"><span class="params">value</span> =&gt;</span> value;</span><br><span class="line">    onRejected =</span><br><span class="line">        <span class="keyword">typeof</span> onRejected === <span class="string">&quot;function&quot;</span> ? onRejected : <span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> reason;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// then里面的FULFILLED/REJECTED状态时 为什么要加setTimeout ?</span></span><br><span class="line">    <span class="comment">// 原因:</span></span><br><span class="line">    <span class="comment">// 其一 2.2.4规范 要确保 onFulfilled 和 onRejected 方法异步执行(且应该在 then 方法被调用的那一轮事件循环之后的新执行栈中执行) 所以要在resolve里加上setTimeout</span></span><br><span class="line">    <span class="comment">// 其二 2.2.6规范 对于一个promise，它的then方法可以调用多次.（当在其他程序中多次调用同一个promise的then时 由于之前状态已经为FULFILLED/REJECTED状态，则会走的下面逻辑),所以要确保为FULFILLED/REJECTED状态后 也要异步执行onFulfilled/onRejected</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 其二 2.2.6规范 也是resolve函数里加setTimeout的原因</span></span><br><span class="line">    <span class="comment">// 总之都是 让then方法异步执行 也就是确保onFulfilled/onRejected异步执行</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如下面这种情景 多次调用p1.then</span></span><br><span class="line">    <span class="comment">// p1.then((value) =&gt; &#123; // 此时p1.status 由pedding状态 =&gt; fulfilled状态</span></span><br><span class="line">    <span class="comment">//     console.log(value); // resolve</span></span><br><span class="line">    <span class="comment">//     // console.log(p1.status); // fulfilled</span></span><br><span class="line">    <span class="comment">//     p1.then(value =&gt; &#123; // 再次p1.then 这时已经为fulfilled状态 走的是fulfilled状态判断里的逻辑 所以我们也要确保判断里面onFuilled异步执行</span></span><br><span class="line">    <span class="comment">//         console.log(value); // &#x27;resolve&#x27;</span></span><br><span class="line">    <span class="comment">//     &#125;);</span></span><br><span class="line">    <span class="comment">//     console.log(&#x27;当前执行栈中同步代码&#x27;);</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br><span class="line">    <span class="comment">// console.log(&#x27;全局执行栈中同步代码&#x27;);</span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (that.<span class="property">status</span> === <span class="variable constant_">FULFILLED</span>) &#123; <span class="comment">// 成功态</span></span><br><span class="line">        <span class="keyword">return</span> newPromise = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">let</span> x = <span class="title function_">onFulfilled</span>(that.<span class="property">value</span>);</span><br><span class="line">                    <span class="title function_">resolvePromise</span>(newPromise, x, resolve, reject); <span class="comment">// 新的promise resolve 上一个onFulfilled的返回值</span></span><br><span class="line">                &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                    <span class="title function_">reject</span>(e); <span class="comment">// 捕获前面onFulfilled中抛出的异常 then(onFulfilled, onRejected);</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (that.<span class="property">status</span> === <span class="variable constant_">REJECTED</span>) &#123; <span class="comment">// 失败态</span></span><br><span class="line">        <span class="keyword">return</span> newPromise = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">let</span> x = <span class="title function_">onRejected</span>(that.<span class="property">reason</span>);</span><br><span class="line">                    <span class="title function_">resolvePromise</span>(newPromise, x, resolve, reject);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                    <span class="title function_">reject</span>(e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (that.<span class="property">status</span> === <span class="variable constant_">PENDING</span>) &#123; <span class="comment">// 等待态</span></span><br><span class="line">        <span class="comment">// 当异步调用resolve/rejected时 将onFulfilled/onRejected收集暂存到集合中</span></span><br><span class="line">        <span class="keyword">return</span> newPromise = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">            that.<span class="property">onFulfilledCallbacks</span>.<span class="title function_">push</span>(<span class="function">(<span class="params">value</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">let</span> x = <span class="title function_">onFulfilled</span>(value);</span><br><span class="line">                    <span class="title function_">resolvePromise</span>(newPromise, x, resolve, reject);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                    <span class="title function_">reject</span>(e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            that.<span class="property">onRejectedCallbacks</span>.<span class="title function_">push</span>(<span class="function">(<span class="params">reason</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    <span class="keyword">let</span> x = <span class="title function_">onRejected</span>(reason);</span><br><span class="line">                    <span class="title function_">resolvePromise</span>(newPromise, x, resolve, reject);</span><br><span class="line">                &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">                    <span class="title function_">reject</span>(e);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Promise.all Promise进行并行处理</span></span><br><span class="line"><span class="comment"> * 参数: promise对象组成的数组作为参数</span></span><br><span class="line"><span class="comment"> * 返回值: 返回一个Promise实例</span></span><br><span class="line"><span class="comment"> * 当这个数组里的所有promise对象全部变为resolve状态的时候，才会resolve。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property">all</span> = <span class="keyword">function</span> (<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> done = <span class="title function_">gen</span>(promises.<span class="property">length</span>, resolve);</span><br><span class="line">        promises.<span class="title function_">forEach</span>(<span class="function">(<span class="params">promise, index</span>) =&gt;</span> &#123;</span><br><span class="line">            promise.<span class="title function_">then</span>(<span class="function">(<span class="params">value</span>) =&gt;</span> &#123;</span><br><span class="line">                <span class="title function_">done</span>(index, value)</span><br><span class="line">            &#125;, reject)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">gen</span>(<span class="params">length, resolve</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">let</span> values = [];</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">i, value</span>) &#123;</span><br><span class="line">        values[i] = value;</span><br><span class="line">        <span class="keyword">if</span> (++count === length) &#123;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(values);</span><br><span class="line">            <span class="title function_">resolve</span>(values);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Promise.race</span></span><br><span class="line"><span class="comment"> * 参数: 接收 promise对象组成的数组作为参数</span></span><br><span class="line"><span class="comment"> * 返回值: 返回一个Promise实例</span></span><br><span class="line"><span class="comment"> * 只要有一个promise对象进入 FulFilled 或者 Rejected 状态的话，就会继续进行后面的处理(取决于哪一个更快)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property">race</span> = <span class="keyword">function</span> (<span class="params">promises</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        promises.<span class="title function_">forEach</span>(<span class="function">(<span class="params">promise, index</span>) =&gt;</span> &#123;</span><br><span class="line">            promise.<span class="title function_">then</span>(resolve, reject);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用于promise方法链时 捕获前面onFulfilled/onRejected抛出的异常</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">catch</span> = <span class="keyword">function</span> (<span class="params">onRejected</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">then</span>(<span class="literal">null</span>, onRejected);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property">resolve</span> = <span class="keyword">function</span> (<span class="params">value</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">resolve</span>(value);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property">reject</span> = <span class="keyword">function</span> (<span class="params">reason</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="title function_">reject</span>(reason);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 基于Promise实现Deferred的</span></span><br><span class="line"><span class="comment"> * Deferred和Promise的关系</span></span><br><span class="line"><span class="comment"> * - Deferred 拥有 Promise</span></span><br><span class="line"><span class="comment"> * - Deferred 具备对 Promise的状态进行操作的特权方法（resolve reject）</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *参考jQuery.Deferred</span></span><br><span class="line"><span class="comment"> *url: http://api.jquery.com/category/deferred-object/</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="property">deferred</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123; <span class="comment">// 延迟对象</span></span><br><span class="line">    <span class="keyword">let</span> defer = &#123;&#125;;</span><br><span class="line">    defer.<span class="property">promise</span> = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        defer.<span class="property">resolve</span> = resolve;</span><br><span class="line">        defer.<span class="property">reject</span> = reject;</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">return</span> defer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Promise/A+规范测试</span></span><br><span class="line"><span class="comment"> * npm i -g promises-aplus-tests</span></span><br><span class="line"><span class="comment"> * promises-aplus-tests Promise.js</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="variable language_">module</span>.<span class="property">exports</span> = <span class="title class_">Promise</span></span><br><span class="line">&#125; <span class="keyword">catch</span> (e) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>来源:<br>
+<a href="https://www.ituring.com.cn/article/66566">https://www.ituring.com.cn/article/66566</a></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 Gitalk -->
+<div id="gitalk-comment">
+    <!-- Gitalk 评论框 -->
+<div id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script>
+    var gitalk = new Gitalk({
+            clientID: '7047f32466c59bed6274',
+            clientSecret: '50030c1dc4654f2f10f8df23b3a084692a8ce248',
+            repo: 'gitTalkBuck',
+            owner: 'zzz1220',
+            admin: ['zzz1220'],
+            // facebook-like distraction free mode
+            distractionFreeMode: false
+        })
+   gitalk.render('gitalk-container')
+</script>
+</div>
+<style>
+    #gitalk-comment {
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/posts/fe80343/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/posts/20a24eb5/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+<script>
+    (function initVisibilitychange() {
+        var title = document.title 
+        var key
+        document.addEventListener('visibilitychange', function() {
+            if(document.visibilityState === 'visible') {
+                document.title = "骗你的~~"
+                key = setTimeout(() => {
+                    document.title = title
+                },1500)
+            }else {
+                clearTimeout(key)
+                document.title = "糟糕~chrome崩溃了~~~"
+            }
+        })
+    })()
+    </script>
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.jpg);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.jpeg" alt="zzz1220's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2023/11/">十一月 2023<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2023/10/">十月 2023<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2022/11/">十一月 2022<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/07/">七月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/05/">五月 2021<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/04/">四月 2021<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/12/">十二月 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/05/">五月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">四月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/07/">七月 2018<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/04/">四月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">三月 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">二月 2018<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">一月 2018<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/about" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于我
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/tags" title="标签云">
+                
+                    <i class="material-icons sidebar-material-icons">label</i>
+                
+                标签云
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="相册">
+                
+                    <i class="material-icons sidebar-material-icons">photo</i>
+                
+                相册
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/books" title="书单">
+                
+                    <i class="material-icons sidebar-material-icons">books</i>
+                
+                书单
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/movies" title="电影">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                电影
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/games" title="游戏">
+                
+                    <i class="material-icons sidebar-material-icons">face</i>
+                
+                游戏
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="链接">
+                
+                    <i class="material-icons sidebar-material-icons">linkify</i>
+                
+                链接
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">32</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar friend  -->
+        <!-- 友链页面 -->
+
+<style>
+.mdl-card.sidebar-card_friend{
+    padding: 20px;
+    width:auto;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.mdl-card.sidebar-card_friend h6{
+    height: 28px;
+    line-height: 28px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: Roboto, "Helvetica Neue";
+    margin: 0 auto;
+}
+.mdl-card.sidebar-card_friend a{
+    color: black;
+    text-decoration-line: none;
+    font-family: Roboto, "Helvetica Neue";
+    width:fit-content;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    white-space: nowrap;
+    word-break: keep-all;
+    margin: 8px 4px;
+    font-size: 13px;
+}
+.mdl-card.sidebar-card_friend a:hover {
+    color: #00838F;
+}
+.mdl-card.sidebar-card_friend a::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #00838F;
+    left:-8px;
+    top:8px;
+}
+#friend-content{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+</style>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+    <a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+             sidebar.about_theme
+            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+    </a>
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https://github.com/zzz1220" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;simmyo_z的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?wgjW/HuQG9JDgvPDPoRAng==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?zvSPHDkEskkA20yxZY14lg==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("sm_js","/js/smoothscroll.js?j10x2vnLBvyUc9TVmIDKCg==", true)</script>
+    
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- GitTalk -->
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+    
+        
+            <script>lsloader.load("prettify_js","/js/prettify.min.js?WN07fivHQSMKWy7BmHBB6w==", true)</script>
+        
+    
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+        
+            $(function() {
+                $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+                prettyPrint();
+                })
+        
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+            <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
+        <script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js?t=1699344494984')
+    .then(function () {console.log('ServiceWorker Register Successfully.')})
+    .catch(function (e) {console.error(e)});
+}
+</script></body>
+    
+</html>
