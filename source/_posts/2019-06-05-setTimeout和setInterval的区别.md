@@ -1,6 +1,6 @@
 ---
 title: setTimeout和setInterval的区别
-tags: javaScript
+tags: JavaScript
 abbrlink: 64e435bc
 date: 2019-06-05 18:55:13
 ---

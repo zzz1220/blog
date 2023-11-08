@@ -1,7 +1,7 @@
 ---
 title: 发布订阅模式的javascript实现
 tags:
-  - javaScript
+  - JavaScript
 abbrlink: 4ec38d83
 date: 2019-05-27 11:20:25
 ---
@@ -54,7 +54,7 @@ myEventEmitter.emit("event")
 
 ### 怎么实现`eventEmitter`
 
-下面是简单实现`eventEmitter`的`javaScript`代码
+下面是简单实现`eventEmitter`的`JavaScript`代码
 
 ```javascript
 function EventEmitter() {

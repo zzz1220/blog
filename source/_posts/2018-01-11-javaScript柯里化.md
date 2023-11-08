@@ -1,7 +1,7 @@
 ---
 title: javaScript柯里化
 layout: post
-tags: javaScript
+tags: JavaScript
 category: code
 comments: true
 abbrlink: 2b34be88
