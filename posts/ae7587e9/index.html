@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,javaScript">
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,JavaScript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -247,11 +247,11 @@
     <meta property="og:title" content="什么是事件冒泡和事件委托 | simmyo_z的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="javaScript"> 
+    <meta property="og:article:tag" content="JavaScript"> 
 
     
         <meta property="article:published_time" content="Sat Mar 03 2018 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/ae7587e9/index.html",
     "headline": "什么是事件冒泡和事件委托",
     "datePublished": "Sat Mar 03 2018 00:00:00 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -292,7 +292,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",javaScriptblog 前端 javascript 算法 日志 css html",
+    "keywords": ",JavaScriptblog 前端 javascript 算法 日志 css html",
     "description": "",
 }
 </script>
@@ -366,7 +366,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是事件？"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶什么是事件？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件流和事件冒泡"><span class="post-toc-number">2.</span> <span class="post-toc-text">¶事件流和事件冒泡</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么是事件？"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶什么是事件？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件流和事件冒泡"><span class="post-toc-number">2.</span> <span class="post-toc-text">¶事件流和事件冒泡</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件委托"><span class="post-toc-number">3.</span> <span class="post-toc-text">¶事件委托</span></a></li></ol>
     </ul>
     
 
@@ -453,7 +453,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javaScript/">javaScript</a>
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
     </ul>
     
 
@@ -534,7 +534,7 @@
     
 </div>
 <div style="padding-left:3rem;font-size: 1rem;">
-    👉👉本文共<span class="post-count">1.1k</span>字📘
+    👉👉本文共<span class="post-count">1.2k</span>字📘
     读完共需<span class="post-count">4</span>分钟⌚
 </div>
                 
@@ -549,7 +549,10 @@
 <p>JavaScript与html之间的交互全部都是由事件实现的。事件就是你操作鼠标或者键盘，对网页进行交互，比如你点击一个按钮，就触发了一个<code>onClick</code>事件，你改变input节点内的<code>value</code>,就出发了<code>onChange</code>事件。</p>
 <h2 id="事件流和事件冒泡"><a class="header-anchor" href="#事件流和事件冒泡">¶</a>事件流和事件冒泡</h2>
 <p>你可以把网页想象成几个同心圆，当你点击最中心的圆的时候，也相当与点击外层的几个圆了，所以说，当你点击页面上的一个按钮，就相当于点击了整张页面，会触发这个按钮的所有父节点的click事件，这个就是事件流。但是当时ie和其他的浏览器偏偏要不一样，ie支持的是冒泡流，而网景提出的是捕获流，后来，在w3c组织的统一下，js支持冒泡流和捕获流，但是呢，某些低版本的浏览器（ie6,ie7,ie8）却只支持冒泡流。直接用onClick就是在冒泡阶段添加事件。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div in=&quot;outer&quot;&gt;</span><br><span class="line">    &lt;div id=&quot;inner&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;div in=&quot;outer&quot;&gt;
+    &lt;div id=&quot;inner&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 <p>对于事件捕获来说，是从外到内的，点击#inner的div，会从window开始捕获，然后是document,html,…,一直到#outer，再到#inner。<br>
 对于事件冒泡来说，是从内到外的，点击#inner的div，会从#inner开始，到#outer，…，最后是window。</p>
 <p>dom事件流分为三个阶段<br>
@@ -557,35 +560,44 @@
 2.处于目标阶段。<br>
 3.事件冒泡。</p>
 <p>可以分别给dom元素添加事件流事件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&#x27;click&#x27;,function()&#123;</span><br><span class="line">            console.log(&#x27;document处于事件捕获阶段&#x27;);</span><br><span class="line">        &#125;, true);// true是捕获阶段，false是冒泡阶段。</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">问题来了，如果不想事件冒泡怎么办？我们点击子节点，不想触发父节点的事件。可以这样做：</span><br></pre></td></tr></table></figure>
-<p>stopPropagation() 方法<br>
-终止事件在传播过程的捕获、目标处理或起泡阶段进一步传播。调用该方法后，该节点上处理该事件的处理程序将被调用，事件不再被分派到其他节点。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 事件委托  </span><br><span class="line">先说下event对象，这个对象会作为事件的默认参数。</span><br><span class="line">api：</span><br></pre></td></tr></table></figure>
-<p>bubbles	返回布尔值，指示事件是否是起泡事件类型。<br>
-cancelable	返回布尔值，指示事件是否可拥可取消的默认动作。<br>
-currentTarget	返回其事件监听器触发该事件的元素。<br>
-eventPhase	返回事件传播的当前阶段。<br>
-target	返回触发此事件的元素（事件的目标节点）。<br>
-timeStamp	返回事件生成的日期和时间。<br>
-type	返回当前 Event 对象表示的事件的名称。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">为啥要进行事件委托，我们都知道dom操作是很花费时间的。与dom节点交互，访问dom节点，非常影响性能。比如要给`ul`下的`li`都添加上click事件，最简单的方法，写个for循环，挨个click就行了，但是这样要多次操纵dom节点。利用事件委托的方式，把`click`事件绑定到`ul`上，因为事件冒泡的存在，会触发`ul`的`click`事件，而且就一次dom操作，那怎么判断点击的是哪一个li呢？这时候上面的event对象就起作用了，event对象提供了一个属性叫target，可以返回事件的目标节点，我们成为事件源，也就是说，target就可以表示为当前的事件操作的dom，但是不是真正操作dom，当然，这个是有兼容性的，标准浏览器用ev.target，IE浏览器用event.srcElement。   </span><br><span class="line">这时候我们就拿到了具体点击的dom节点，然后用nodeName获取节点名，在函数内部判断下，就实现把dom操作放在js代码内部来实现了。   </span><br><span class="line">而且这样做还有一点好处就是，新添加的`li`标签不会点击无效，如果直接把事件绑定在`li`上，每添加`li`都要重新绑定事件。   </span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<ul id="ul">
-<li></li>
-</ul>
-<p>window.onload = function(){<br>
-　　var oUl = document.getElementById(“ul”);<br>
-　　oUl.onclick = function(ev){<br>
-　　　　var ev = ev || window.event;<br>
-　　　　var target = ev.target || ev.srcElement;<br>
-　　　　if(target.nodeName.toLowerCase() == ‘li’){<br>
-　 　　　　　　	alert(123);<br>
-　　　　　　　  alert(target.innerHTML);<br>
-　　　　}<br>
-　　}<br>
-}</p>
-<pre><code>
+<pre><code>document.addEventListener('click',function(){
+            console.log('document处于事件捕获阶段');
+        }, true);// true是捕获阶段，false是冒泡阶段。
+</code></pre>
+<p>问题来了，如果不想事件冒泡怎么办？我们点击子节点，不想触发父节点的事件。可以这样做：</p>
+<pre><code>stopPropagation() 方法
+终止事件在传播过程的捕获、目标处理或起泡阶段进一步传播。调用该方法后，该节点上处理该事件的处理程序将被调用，事件不再被分派到其他节点。
+</code></pre>
+<h2 id="事件委托"><a class="header-anchor" href="#事件委托">¶</a>事件委托</h2>
+<p>先说下event对象，这个对象会作为事件的默认参数。<br>
+api：</p>
+<pre><code>bubbles	返回布尔值，指示事件是否是起泡事件类型。
+cancelable	返回布尔值，指示事件是否可拥可取消的默认动作。
+currentTarget	返回其事件监听器触发该事件的元素。
+eventPhase	返回事件传播的当前阶段。
+target	返回触发此事件的元素（事件的目标节点）。
+timeStamp	返回事件生成的日期和时间。
+type	返回当前 Event 对象表示的事件的名称。
+</code></pre>
+<p>为啥要进行事件委托，我们都知道dom操作是很花费时间的。与dom节点交互，访问dom节点，非常影响性能。比如要给<code>ul</code>下的<code>li</code>都添加上click事件，最简单的方法，写个for循环，挨个click就行了，但是这样要多次操纵dom节点。利用事件委托的方式，把<code>click</code>事件绑定到<code>ul</code>上，因为事件冒泡的存在，会触发<code>ul</code>的<code>click</code>事件，而且就一次dom操作，那怎么判断点击的是哪一个li呢？这时候上面的event对象就起作用了，event对象提供了一个属性叫target，可以返回事件的目标节点，我们成为事件源，也就是说，target就可以表示为当前的事件操作的dom，但是不是真正操作dom，当然，这个是有兼容性的，标准浏览器用ev.target，IE浏览器用event.srcElement。<br>
+这时候我们就拿到了具体点击的dom节点，然后用nodeName获取节点名，在函数内部判断下，就实现把dom操作放在js代码内部来实现了。<br>
+而且这样做还有一点好处就是，新添加的<code>li</code>标签不会点击无效，如果直接把事件绑定在<code>li</code>上，每添加<code>li</code>都要重新绑定事件。</p>
+<pre><code>&lt;ul id=&quot;ul&quot;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 
+window.onload = function(){
+		    　　var oUl = document.getElementById(&quot;ul&quot;);
+		    　　oUl.onclick = function(ev){
+		    	　　　　var ev = ev || window.event;
+		   		　　　　var target = ev.target || ev.srcElement;
+		        　　　　if(target.nodeName.toLowerCase() == 'li'){
+		        　 　　　　　　	alert(123);
+		　　　　　　　  alert(target.innerHTML);
+				　　　　}
+		    　　}
+		}
 </code></pre>
 
         
@@ -768,7 +780,7 @@ type	返回当前 Event 对象表示的事件的名称。</p>
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1217,7 +1229,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

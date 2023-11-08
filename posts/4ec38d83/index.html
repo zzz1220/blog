@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,javaScript">
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,JavaScript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -247,11 +247,11 @@
     <meta property="og:title" content="发布订阅模式的javascript实现 | simmyo_z的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="javaScript"> 
+    <meta property="og:article:tag" content="JavaScript"> 
 
     
         <meta property="article:published_time" content="Mon May 27 2019 11:20:25 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/4ec38d83/index.html",
     "headline": "发布订阅模式的javascript实现",
     "datePublished": "Mon May 27 2019 11:20:25 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -292,7 +292,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",javaScriptblog 前端 javascript 算法 日志 css html",
+    "keywords": ",JavaScriptblog 前端 javascript 算法 日志 css html",
     "description": "",
 }
 </script>
@@ -366,7 +366,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发布订阅模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶发布订阅模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript里的发布订阅模式"><span class="post-toc-number">2.</span> <span class="post-toc-text">¶JavaScript里的发布订阅模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么实现eventEmitter"><span class="post-toc-number">3.</span> <span class="post-toc-text">¶怎么实现eventEmitter</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#发布订阅模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶发布订阅模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#javascript里的发布订阅模式"><span class="post-toc-number">2.</span> <span class="post-toc-text">¶JavaScript里的发布订阅模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么实现eventemitter"><span class="post-toc-number">3.</span> <span class="post-toc-text">¶怎么实现eventEmitter</span></a></li></ol>
     </ul>
     
 
@@ -453,7 +453,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javaScript/">javaScript</a>
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
     </ul>
     
 
@@ -534,8 +534,8 @@
     
 </div>
 <div style="padding-left:3rem;font-size: 1rem;">
-    👉👉本文共<span class="post-count">920</span>字📘
-    读完共需<span class="post-count">4</span>分钟⌚
+    👉👉本文共<span class="post-count">850</span>字📘
+    读完共需<span class="post-count">3</span>分钟⌚
 </div>
                 
 
@@ -543,29 +543,122 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <h3 id="发布订阅模式"><a class="header-anchor" href="#发布订阅模式">¶</a>发布订阅模式</h3>
-<p>在<a href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84">软件架构</a>中，<strong>发布-订阅</strong>是一种<a href="https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF">消息</a><a href="https://zh.wikipedia.org/wiki/%E8%8C%83%E5%BC%8F">范式</a>，消息的发送者（称为发布者）不会将消息直接发送给特定的接收者（称为订阅者）。而是将发布的消息分为不同的类别，无需了解哪些订阅者（如果有的话）可能存在。同样的，订阅者可以表达对一个或多个类别的兴趣，只接收感兴趣的消息，无需了解哪些发布者（如果有的话）存在。</p>
-<p>发布/订阅是<a href="https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97">消息队列</a>范式的兄弟，通常是更大的<a href="https://zh.wikipedia.org/w/index.php?title=%E9%9D%A2%E5%90%91%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6&amp;action=edit&amp;redlink=1">面向消息中间件</a>系统的一部分。大多数消息系统在<a href="https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3">API</a>中同时支持消息队列模型和发布/订阅模型，例如<a href="https://zh.wikipedia.org/wiki/Java%E6%B6%88%E6%81%AF%E6%9C%8D%E5%8A%A1">Java消息服务</a>（JMS）。</p>
-<p>这种模式提供了更大的网络<a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7">可扩展性</a>和更动态的<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91">网络拓扑</a>，同时也降低了对发布者和发布数据的结构修改的灵活性。</p>
+<p>在<a href="https://zh.wikipedia.org/wiki/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84" target="_blank" rel="noopener">软件架构</a>中，<strong>发布-订阅</strong>是一种<a href="https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF" target="_blank" rel="noopener">消息</a><a href="https://zh.wikipedia.org/wiki/%E8%8C%83%E5%BC%8F" target="_blank" rel="noopener">范式</a>，消息的发送者（称为发布者）不会将消息直接发送给特定的接收者（称为订阅者）。而是将发布的消息分为不同的类别，无需了解哪些订阅者（如果有的话）可能存在。同样的，订阅者可以表达对一个或多个类别的兴趣，只接收感兴趣的消息，无需了解哪些发布者（如果有的话）存在。</p>
+<p>发布/订阅是<a href="https://zh.wikipedia.org/wiki/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97" target="_blank" rel="noopener">消息队列</a>范式的兄弟，通常是更大的<a href="https://zh.wikipedia.org/w/index.php?title=%E9%9D%A2%E5%90%91%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">面向消息中间件</a>系统的一部分。大多数消息系统在<a href="https://zh.wikipedia.org/wiki/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">API</a>中同时支持消息队列模型和发布/订阅模型，例如<a href="https://zh.wikipedia.org/wiki/Java%E6%B6%88%E6%81%AF%E6%9C%8D%E5%8A%A1" target="_blank" rel="noopener">Java消息服务</a>（JMS）。</p>
+<p>这种模式提供了更大的网络<a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7" target="_blank" rel="noopener">可扩展性</a>和更动态的<a href="https://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91" target="_blank" rel="noopener">网络拓扑</a>，同时也降低了对发布者和发布数据的结构修改的灵活性。</p>
 <p>优点：</p>
 <ol>
-<li>松耦合：发布者与订阅者<a href="https://zh.wikipedia.org/wiki/%E6%9D%BE%E8%80%A6%E5%90%88">松耦合</a>，甚至不需要知道它们的存在。</li>
-<li>可扩展性：通过并行操作，消息缓存，基于树或基于网络的路由等技术，发布/订阅提供了比传统的客户端–服务器更好的<a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E6%89%A9%E6%94%BE%E6%80%A7">可扩展性</a>。</li>
+<li>松耦合：发布者与订阅者<a href="https://zh.wikipedia.org/wiki/%E6%9D%BE%E8%80%A6%E5%90%88" target="_blank" rel="noopener">松耦合</a>，甚至不需要知道它们的存在。</li>
+<li>可扩展性：通过并行操作，消息缓存，基于树或基于网络的路由等技术，发布/订阅提供了比传统的客户端–服务器更好的<a href="https://zh.wikipedia.org/wiki/%E5%8F%AF%E6%89%A9%E6%94%BE%E6%80%A7" target="_blank" rel="noopener">可扩展性</a>。</li>
 </ol>
-<h3 id="JavaScript里的发布订阅模式"><a class="header-anchor" href="#JavaScript里的发布订阅模式">¶</a><code>JavaScript</code>里的发布订阅模式</h3>
+<h3 id="javascript里的发布订阅模式"><a class="header-anchor" href="#javascript里的发布订阅模式">¶</a><code>JavaScript</code>里的发布订阅模式</h3>
 <p>在<code>dom</code>事件里面，有一种事件监听的模式就是基于发布订阅设计的，比如非常常见的给节点添加点击事件</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;button&quot;</span>)</span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>,<span class="function">() =&gt;</span> &#123;<span class="title function_">alert</span>(<span class="string">&#x27;click&#x27;</span>)&#125;,<span class="literal">false</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">var button = document.getElementById(&quot;button&quot;)
+button.addEventListener('click',() =&gt; {alert('click')},false)
+</code></pre>
 <p>这样的写法好处很明显，分离事件触发和事件内容解耦。</p>
 <p>在<code>node</code>里面，还有<code>EventEmitter</code>这个类，用来实现发布订阅模式，来处理不同对象之间的事件调用。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">EventEmitter</span> = <span class="built_in">require</span>(<span class="string">&#x27;events&#x27;</span>);	</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">MyEventEmitter</span> <span class="keyword">extends</span> <span class="title class_">EventEmitter</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myEventEmitter = <span class="keyword">new</span> <span class="title class_">MyEventEmitter</span></span><br><span class="line">myEventEmitter.<span class="title function_">on</span>(<span class="string">&#x27;event&#x27;</span>,<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;target this event&quot;</span>)</span><br><span class="line">&#125;)</span><br><span class="line">myEventEmitter.<span class="title function_">emit</span>(<span class="string">&quot;event&quot;</span>)</span><br><span class="line"><span class="comment">// target this event</span></span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">const EventEmitter = require('events');	
+const MyEventEmitter extends EventEmitter
+
+const myEventEmitter = new MyEventEmitter
+myEventEmitter.on('event',() =&gt; {
+    console.log(&quot;target this event&quot;)
+})
+myEventEmitter.emit(&quot;event&quot;)
+// target this event
+</code></pre>
 <p>我之前用<code>BackBone</code>构建单页面应用的时候，就广泛用到了发布订阅模式处理不同组件之间的数据交互，但是这种方法如果滥用，会造成事件交互逻辑的不清晰，所以，父子组件数据交互还是推荐用回调的方式来做。</p>
-<h3 id="怎么实现eventEmitter"><a class="header-anchor" href="#怎么实现eventEmitter">¶</a>怎么实现<code>eventEmitter</code></h3>
-<p>下面是简单实现<code>eventEmitter</code>的<code>javaScript</code>代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">EventEmitter</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_event</span> = &#123;&#125;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">maxListenerNum</span> = <span class="number">10</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">EventEmitter</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">on</span> = <span class="keyword">function</span>(<span class="params">type,callback</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> callback !== <span class="string">&quot;function&quot;</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">TypeError</span>(<span class="string">&#x27;callback must be a function&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!<span class="variable language_">this</span>.<span class="property">_event</span>) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">_event</span> = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="literal">null</span>) <span class="comment">// 这里判断不存在就生成一个，如果是继承的，不会继承这个 _event</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">_event</span>[type] ) &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">_event</span>[type.<span class="property">length</span> &gt; <span class="variable language_">this</span>.<span class="property">maxListenerNum</span>] ) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">&quot;too long&quot;</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">_event</span>[type].<span class="title function_">push</span>(callback)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">_event</span>[type] = [callback]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="title class_">EventEmitter</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">once</span> = <span class="keyword">function</span> (<span class="params">type,callback</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> <span class="title function_">warp</span> = (<span class="params">...args</span>) =&gt; &#123;</span><br><span class="line">        <span class="title function_">callback</span>(...args)</span><br><span class="line">        <span class="variable language_">this</span>.<span class="title function_">removeListener</span>(type,warp)</span><br><span class="line">    &#125;</span><br><span class="line">    warp.<span class="property">flag</span> = callback</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">on</span>(type,warp)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">EventEmitter</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">removeListener</span> = <span class="keyword">function</span>(<span class="params">type,callback</span>)  &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">_event</span>[type] ) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">_event</span>[type].<span class="title function_">splice</span>(<span class="variable language_">this</span>.<span class="property">_event</span>[type].<span class="title function_">indexOf</span>(callback),<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">EventEmitter</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">removeListeners</span> = <span class="keyword">function</span>(<span class="params">type</span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">_event</span>[type] = <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">EventEmitter</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">emit</span> = <span class="keyword">function</span>(<span class="params">type,...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="variable language_">this</span>.<span class="property">_event</span>[type]) &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">_event</span>[type].<span class="title function_">forEach</span>(<span class="function"><span class="params">fn</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="title function_">fn</span>(...args)</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="怎么实现eventemitter"><a class="header-anchor" href="#怎么实现eventemitter">¶</a>怎么实现<code>eventEmitter</code></h3>
+<p>下面是简单实现<code>eventEmitter</code>的<code>JavaScript</code>代码</p>
+<pre><code class="language-javascript">function EventEmitter() {
+    this._event = {}
+    this.maxListenerNum = 10
+}
+
+EventEmitter.prototype.on = function(type,callback) {
+    if(typeof callback !== &quot;function&quot;) {
+        throw new TypeError('callback must be a function')
+    }
+    if(!this._event) {
+        this._event = Object.create(null) // 这里判断不存在就生成一个，如果是继承的，不会继承这个 _event
+    }
+
+    if(this._event[type] ) {
+        if(this._event[type.length &gt; this.maxListenerNum] ) {
+            throw new Error(&quot;too long&quot;)
+        }
+        this._event[type].push(callback)
+    } else {
+        this._event[type] = [callback]
+    }
+}
+
+
+EventEmitter.prototype.once = function (type,callback) {
+    let warp = (...args) =&gt; {
+        callback(...args)
+        this.removeListener(type,warp)
+    }
+    warp.flag = callback
+    this.on(type,warp)
+}
+
+EventEmitter.prototype.removeListener = function(type,callback)  {
+    if(this._event[type] ) {
+        this._event[type].splice(this._event[type].indexOf(callback),1)
+    }
+}
+
+EventEmitter.prototype.removeListeners = function(type){
+    this._event[type] = null
+}
+
+EventEmitter.prototype.emit = function(type,...args) {
+    if(this._event[type]) {
+        this._event[type].forEach(fn =&gt; {
+            fn(...args)
+        });
+    }
+
+}
+</code></pre>
 <p>测试代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> my = <span class="keyword">new</span> <span class="title class_">EventEmitter</span></span><br><span class="line"></span><br><span class="line">my.<span class="title function_">on</span>(<span class="string">&#x27;a&#x27;</span>,<span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">my.<span class="title function_">once</span>(<span class="string">&#x27;once&#x27;</span>, <span class="function">(<span class="params">a</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="title function_">add</span> = (<span class="params">a,b</span>) =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(a+b); </span><br><span class="line">&#125;</span><br><span class="line">my.<span class="title function_">on</span>(<span class="string">&#x27;b&#x27;</span>,add)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;a&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;a&#x27;</span>,<span class="number">2</span>)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;b&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;once&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;once&#x27;</span>,<span class="number">2</span>)</span><br><span class="line">my.<span class="title function_">removeListeners</span>(<span class="string">&#x27;a&#x27;</span>)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;a&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">my.<span class="title function_">removeListener</span>(<span class="string">&#x27;b&#x27;</span>)</span><br><span class="line">my.<span class="title function_">emit</span>(<span class="string">&#x27;b&#x27;</span>,<span class="number">1</span>,<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 输出</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">2</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">1</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">var my = new EventEmitter
+
+my.on('a',(a) =&gt; {
+    console.log(a);
+})
+
+
+my.once('once', (a) =&gt; {
+    console.log(a);
+})
+
+let add = (a,b) =&gt; {
+    console.log(a+b); 
+}
+my.on('b',add)
+my.emit('a',1)
+my.emit('a',2)
+my.emit('b',1,2)
+my.emit('once',1)
+my.emit('once',2)
+my.removeListeners('a')
+my.emit('a',1)
+my.removeListener('b')
+my.emit('b',1,2)
+
+/* 输出
+1
+2
+3
+1
+*/
+</code></pre>
 <p>参考：</p>
-<p>1.<a href="https://zh.wikipedia.org/zh-hans/%E5%8F%91%E5%B8%83/%E8%AE%A2%E9%98%85">https://zh.wikipedia.org/zh-hans/%E5%8F%91%E5%B8%83/%E8%AE%A2%E9%98%85</a></p>
-<p>2.<a href="https://segmentfault.com/a/1190000015762318">https://segmentfault.com/a/1190000015762318</a></p>
+<p>1.<a href="https://zh.wikipedia.org/zh-hans/%E5%8F%91%E5%B8%83/%E8%AE%A2%E9%98%85" target="_blank" rel="noopener">https://zh.wikipedia.org/zh-hans/%E5%8F%91%E5%B8%83/%E8%AE%A2%E9%98%85</a></p>
+<p>2.<a href="https://segmentfault.com/a/1190000015762318" target="_blank" rel="noopener">https://segmentfault.com/a/1190000015762318</a></p>
 
         
     
@@ -747,7 +840,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1196,7 +1289,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

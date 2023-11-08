@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Thu Apr 08 2021 23:38:41 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/7e570359/index.html",
     "headline": "2道算法题的优化过程",
     "datePublished": "Thu Apr 08 2021 23:38:41 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -557,11 +557,52 @@
 输出：7, nums = [0,0,1,1,2,3,3]<br>
 解释：函数应返回新长度 length = 7, 并且原数组的前五个元素被修改为 0, 0, 1, 1, 2, 3, 3 。 不需要考虑数组中超出新长度后面的元素。<br>
 一看到题目,觉得不难,马上开始写代码,就模拟整个过程,几分钟搞定.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeDuplicates = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> len = nums.<span class="property">length</span></span><br><span class="line">    <span class="keyword">let</span> last = nums[len-<span class="number">1</span>]</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = nums.<span class="property">length</span>-<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] === last) &#123;</span><br><span class="line">            count++</span><br><span class="line">            <span class="keyword">if</span>(count&gt;<span class="number">2</span>) &#123;</span><br><span class="line">                len--</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">let</span> j = i;j&lt;len;j++) &#123;</span><br><span class="line">                    nums[j] = nums[j+<span class="number">1</span>]</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            count = <span class="number">1</span></span><br><span class="line">            last = nums[i]</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> len</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-JavaScript">var removeDuplicates = function(nums) {
+    
+    let len = nums.length
+    let last = nums[len-1]
+    let count = 1
+
+    for(let i = nums.length-2;i&gt;=0;i--) {
+        if(nums[i] === last) {
+            count++
+            if(count&gt;2) {
+                len--
+                for(let j = i;j&lt;len;j++) {
+                    nums[j] = nums[j+1]
+                }
+
+            }
+        }else {
+            count = 1
+            last = nums[i]
+        }   
+    }
+    return len
+};
+</code></pre>
 <p>刚好这几天几个同事都在打卡每日一题,我们交流了一下,我把自己的代码给同事看了看,一个同事立马说,你这个时间复杂度太高了,我仔细看了看代码,确实,循环里面移动数组,大概复杂度O(n^2).</p>
 <p>听了同事的的解法,我顿悟了,原来双指针就好了,快慢指针,慢指针保持长度,快指针每次+1用来检查后面的元素,遇到不同的元素,并且前方已经出现了两个重复的,就覆盖前方慢指针的元素,然后慢指针继续+1</p>
 <p>下面是代码:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> removeDuplicates = <span class="keyword">function</span>(<span class="params">nums</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> n = nums.<span class="property">length</span></span><br><span class="line">    <span class="keyword">if</span>(n&lt;<span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> n</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> slow = <span class="number">2</span></span><br><span class="line">    <span class="keyword">let</span> fast = <span class="number">2</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(fast&lt;n) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[slow-<span class="number">2</span>] !== nums[fast]) &#123;</span><br><span class="line">            nums[slow] = nums[fast]</span><br><span class="line">            slow++</span><br><span class="line">        &#125;</span><br><span class="line">        fast++</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> slow</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-JavaScript">var removeDuplicates = function(nums) {
+    let n = nums.length
+    if(n&lt;2) {
+        return n
+    }
+    let slow = 2
+    let fast = 2
+    
+    while(fast&lt;n) {
+        if(nums[slow-2] !== nums[fast]) {
+            nums[slow] = nums[fast]
+            slow++
+        }
+        fast++
+    }
+    
+    return slow
+};
+</code></pre>
 <p>这样时间复杂度就被优化到了O(n),只遍历了一边.<br>
 经过自己的测试,在长度为999999,三个一组相同的数组的运行测试下,第二种花费大概3ms,而第一种,居然用了100000+ms,相差了3万倍!!!🤯 🤯 🤯 🤯 🤯</p>
 <h3 id="第二题"><a class="header-anchor" href="#第二题">¶</a>第二题</h3>
@@ -584,7 +625,25 @@ nums[2] + nums[3] = 10</p>
 考虑到没有负数,于是加了个判断第一个数的长度是否大于target,然而还是超时.<br>
 想了想,先排下顺序吧,然后二分找到小于target的部分,在这个范围内判断,后来又想,如果target很大怎么办?不还是要遍历很多次吗?<br>
 想啊想,死掉n个脑细胞,m根头发后,我明白了,在一个顺序的数组里,如果下标i和下标j满足小于target,那么i和其他小于j的其他组合都满足,这个个数是(j-i)个,然后i++继续判断就行了,如果大于target了,就大数的下标,j 向左移动j-- 就行了. 想明白后,才发现已经过去1个小时了.马上动手写代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> purchasePlans = <span class="keyword">function</span>(<span class="params">nums, target</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="variable constant_">MOD</span> = <span class="number">1000000007</span></span><br><span class="line">    nums.<span class="title function_">sort</span>(<span class="function">(<span class="params">a,b</span>) =&gt;</span> a-b)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">let</span>  j = nums.<span class="property">length</span>-<span class="number">1</span></span><br><span class="line">    <span class="keyword">let</span> res = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(i&lt;j) &#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] + nums[j] &lt;= target) &#123;</span><br><span class="line">            res+=j-i</span><br><span class="line">            res = res%<span class="variable constant_">MOD</span></span><br><span class="line">            i++</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            j--</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-JavaScript">var purchasePlans = function(nums, target) {
+    const MOD = 1000000007
+    nums.sort((a,b) =&gt; a-b)
+
+    let i = 0
+    let  j = nums.length-1
+    let res = 0
+    while(i&lt;j) {
+        if(nums[i] + nums[j] &lt;= target) {
+            res+=j-i
+            res = res%MOD
+            i++
+        }else {
+            j--
+        }
+    }
+    return res
+};
+</code></pre>
 <p>这样就O(n)了,同时,不要忘了模MOD.</p>
 <p>注意时间复杂度,不要再写低效率的代码了💪💪💪💪💪</p>
 
@@ -768,7 +827,7 @@ nums[2] + nums[3] = 10</p>
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1217,7 +1276,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,javaScript">
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,JavaScript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -247,11 +247,11 @@
     <meta property="og:title" content="setTimeout和setInterval的区别 | simmyo_z的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="javaScript"> 
+    <meta property="og:article:tag" content="JavaScript"> 
 
     
         <meta property="article:published_time" content="Wed Jun 05 2019 18:55:13 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/64e435bc/index.html",
     "headline": "setTimeout和setInterval的区别",
     "datePublished": "Wed Jun 05 2019 18:55:13 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -292,7 +292,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",javaScriptblog 前端 javascript 算法 日志 css html",
+    "keywords": ",JavaScriptblog 前端 javascript 算法 日志 css html",
     "description": "",
 }
 </script>
@@ -366,7 +366,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setTimeout"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶setTimeout</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">¶参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#返回值"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">¶返回值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用途"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">¶用途</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#settimeout"><span class="post-toc-number">1.</span> <span class="post-toc-text">¶setTimeout</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参数"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">¶参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#返回值"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">¶返回值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用途"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">¶用途</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -453,7 +453,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javaScript/">javaScript</a>
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
     </ul>
     
 
@@ -545,29 +545,47 @@
         <blockquote>
 <p>我们再前端开发中需要实现定时任务或者<code>js</code>动画，都要用到<code>setTimeout</code>和<code>setInterval</code>z这两个函数，但是对于他们的原理，如果不清楚，往往会造成一些意想不到的问题。</p>
 </blockquote>
-<h3 id="setTimeout"><a class="header-anchor" href="#setTimeout">¶</a><code>setTimeout</code></h3>
+<h3 id="settimeout"><a class="header-anchor" href="#settimeout">¶</a><code>setTimeout</code></h3>
 <p><code>setTimeout</code>方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。</p>
 <p>语法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> id = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>[,delay,param1...])</span><br><span class="line"><span class="keyword">var</span> id = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>[,delay])</span><br><span class="line"><span class="keyword">var</span> id = <span class="built_in">setTimeout</span>(code[,delay])</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">var id = setTimeout(function[,delay,param1...])
+var id = setTimeout(function[,delay])
+var id = setTimeout(code[,delay])
+</code></pre>
 <h4 id="参数"><a class="header-anchor" href="#参数">¶</a>参数</h4>
 <p><code>function</code></p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/function"><code>function</code></a> 是你想要在到期时间(<code>delay</code>毫秒)之后执行的<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function">函数</a>。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/function" target="_blank" rel="noopener"><code>function</code></a> 是你想要在到期时间(<code>delay</code>毫秒)之后执行的<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function" target="_blank" rel="noopener">函数</a>。</p>
 <p><code>code</code></p>
-<p>这是一个可选语法，你可以使用字符串而不是<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/function"><code>function</code></a> ，在<code>delay</code>毫秒之后编译和执行字符串 (使用该语法是<strong>不推荐的,</strong> 原因和使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval"><code>eval()</code></a>一样，有安全风险)。</p>
-<p><code>delay </code>可选</p>
-<p>延迟的毫秒数 (一秒等于1000毫秒)，函数的调用会在该延迟之后发生。如果省略该参数，delay取默认值0，意味着“马上”执行，或者尽快执行。不管是哪种情况，实际的延迟时间可能会比期待的(delay毫秒数) 值长，原因请查看<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setTimeout#Reasons_for_delays_longer_than_specified">Reasons for delays longer than specified</a>。</p>
+<p>这是一个可选语法，你可以使用字符串而不是<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/function" target="_blank" rel="noopener"><code>function</code></a> ，在<code>delay</code>毫秒之后编译和执行字符串 (使用该语法是<strong>不推荐的,</strong> 原因和使用 <a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval" target="_blank" rel="noopener"><code>eval()</code></a>一样，有安全风险)。</p>
+<p><code>delay</code>可选</p>
+<p>延迟的毫秒数 (一秒等于1000毫秒)，函数的调用会在该延迟之后发生。如果省略该参数，delay取默认值0，意味着“马上”执行，或者尽快执行。不管是哪种情况，实际的延迟时间可能会比期待的(delay毫秒数) 值长，原因请查看<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setTimeout#Reasons_for_delays_longer_than_specified" target="_blank" rel="noopener">Reasons for delays longer than specified</a>。</p>
 <p><code>param1, ..., paramN</code> 可选</p>
-<p>附加参数，一旦定时器到期，它们会作为参数传递给<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/function"><code>function</code></a></p>
+<p>附加参数，一旦定时器到期，它们会作为参数传递给<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/function" target="_blank" rel="noopener"><code>function</code></a></p>
 <h4 id="返回值"><a class="header-anchor" href="#返回值">¶</a>返回值</h4>
-<p>返回值<code>timeoutID</code>是一个正整数，表示定时器的编号。这个值可以传递给<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout"><code>clearTimeout()</code></a>来取消该定时器。</p>
+<p>返回值<code>timeoutID</code>是一个正整数，表示定时器的编号。这个值可以传递给<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout" target="_blank" rel="noopener"><code>clearTimeout()</code></a>来取消该定时器。</p>
 <h4 id="用途"><a class="header-anchor" href="#用途">¶</a>用途</h4>
 <p>举个例子，三秒后跳转新页面</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    location.<span class="property">href</span> = <span class="string">&quot;url&quot;</span></span><br><span class="line">&#125;,<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">setTimeout(function() {
+    location.href = &quot;url&quot;
+},3000)
+</code></pre>
 <p>在函数执行前取消</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> key;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">myFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">    key = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>)&#123; <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;fn&quot;</span>) &#125;, <span class="number">3000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">myStopFunction</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="built_in">clearTimeout</span>(key);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">var key;
+function myFunction() {
+    key = setTimeout(function(){ console.log(&quot;fn&quot;) }, 3000);
+}
+function myStopFunction() {
+    clearTimeout(key);
+}
+</code></pre>
 <p>如果你只是掌握了上面的用法，不了解它的原理，就会犯一些错误</p>
 <p>比如一个常见的面试题</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 1;i &lt;= 5;i ++) &#123;</span><br><span class="line">  setTimeout(function timer() &#123;</span><br><span class="line">      console.log(i)</span><br><span class="line">  &#125;,i * 1000)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javas">for (var i = 1;i &lt;= 5;i ++) {
+  setTimeout(function timer() {
+      console.log(i)
+  },i * 1000)
+}
+</code></pre>
 <p>问打印出来的是什么？</p>
 <p>如果对闭包和作用域不了解的同学会以为是每隔一秒就输出1,2,3,4,5。但实际上是每隔一秒输出了6。</p>
 <p>原因就是作用域，在<code>javascript</code>里面没有块作用域，因此，当<code>setTimeout</code>里面的函数执行的时候，所有的i都是<code>for</code>循环里面的<code>i</code>，此时，<code>i</code>是6。</p>
@@ -582,30 +600,49 @@
 <p>可以用下面的方法。</p>
 <p>1.<code>es6</code>的<code>let</code>关键词</p>
 <p><code>let</code>是<code>es6</code>的块作用域的声明关键词。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i++) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="keyword">function</span> <span class="title function_">timer</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">  &#125;, i * <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">for(let i = 0;i&lt;5;i++) {
+  setTimeout(function timer(){
+    console.log(i);
+  }, i * 1000);
+}
+</code></pre>
 <p>2.利用闭包</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;<span class="number">5</span>;i ++) &#123;</span><br><span class="line">  (<span class="keyword">function</span>(<span class="params">i</span>)&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="keyword">function</span> <span class="title function_">timer</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(i)</span><br><span class="line">    &#125;, i * <span class="number">1000</span>);</span><br><span class="line">  &#125;)(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">for(var i = 0;i&lt;5;i ++) {
+  (function(i){
+    setTimeout(function timer() {
+      console.log(i)
+    }, i * 1000);
+  })(i);
+}
+</code></pre>
 <p>3.利用第三个参数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">1</span>; i&lt;=<span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="built_in">setTimeout</span>( <span class="keyword">function</span> <span class="title function_">timer</span>(<span class="params">i</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(i);    </span><br><span class="line">   &#125;, i*<span class="number">1000</span>,i );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">for (var i=1; i&lt;=5; i++) {
+  setTimeout( function timer(i) {
+    console.log(i);    
+   }, i*1000,i );
+}
+</code></pre>
 <p>tips:</p>
 <p><code>setTimeout</code>第一个参数函数里面的<code>this</code>是<code>window</code>。</p>
 <p>###　setInterval</p>
 <p><strong>setInterval()</strong> 方法重复调用一个函数或执行一个代码段，在每次调用之间具有固定的时间延迟。</p>
 <p>语法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> intervalID = <span class="variable language_">window</span>.<span class="built_in">setInterval</span>(func, delay[, param1, param2, ...]);</span><br><span class="line"><span class="keyword">let</span> intervalID = <span class="variable language_">window</span>.<span class="built_in">setInterval</span>(code, delay);</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">let intervalID = window.setInterval(func, delay[, param1, param2, ...]);
+let intervalID = window.setInterval(code, delay);
+</code></pre>
 <p>参数</p>
 <ul>
 <li><code>intervalID</code> 是此重复操作的唯一辨识符，可以作为参数传给<code>clearInterval``()</code>。</li>
 <li><code>func</code> 是你想要重复调用的函数。</li>
-<li><code>code</code> 是另一种语法的应用，是指你想要重复执行的一段字符串构成的代码(使用该语法是<strong>不推荐</strong>的，不推荐的原因和<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don't_use_eval!">eval()</a>一样)。</li>
-<li><code>delay</code> 是每次延迟的毫秒数 (一秒等于1000毫秒)，函数的每次调用会在该延迟之后发生。和<a href="https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout#Minimum_delay_and_timeout_nesting">setTimeout</a>一样，实际的延迟时间可能会稍长一点。</li>
+<li><code>code</code> 是另一种语法的应用，是指你想要重复执行的一段字符串构成的代码(使用该语法是<strong>不推荐</strong>的，不推荐的原因和<a href="https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don't_use_eval!" target="_blank" rel="noopener">eval()</a>一样)。</li>
+<li><code>delay</code> 是每次延迟的毫秒数 (一秒等于1000毫秒)，函数的每次调用会在该延迟之后发生。和<a href="https://developer.mozilla.org/en-US/docs/DOM/window.setTimeout#Minimum_delay_and_timeout_nesting" target="_blank" rel="noopener">setTimeout</a>一样，实际的延迟时间可能会稍长一点。</li>
 </ul>
 <p>返回值</p>
 <p>返回一个 intervalID。可以用clearInterval函数来取消定时任务。</p>
 <p><strong>这里需要注意，于setTimeout返回的id公用一个id池</strong></p>
 <p>通常，这个函数用来执行周期执行的函数，比如动画之类的效果。</p>
 <p>mdn里面有个打字机效果的例子。</p>
-<p><a href="https://mdn.mozillademos.org/files/3997/typewriter.html">打字机效果</a></p>
+<p><a href="https://mdn.mozillademos.org/files/3997/typewriter.html" target="_blank" rel="noopener">打字机效果</a></p>
 <p>和<code>setTimeout</code>一样，也是加入到异步队列里，等待合适的时机运行。</p>
 <blockquote>
 <p>当使用<code>setInterval</code>时,仅当(在队列中)没有该定时器的任何其他代码实例时,才将定时器代码添加到队列中,引用JavaScript高级程序设计第三版书中语句</p>
@@ -614,7 +651,11 @@
 <p>所以，如果你的函数（第一个参数）执行时间比较长，但是你的执行间隔时间设置的比较短，可不要以为可以精准的在预料的时间点会执行设置的函数。</p>
 <p>此外，第二个参数也有一个最短的默认参数，在<code>chrome</code>里面是7ms。</p>
 <p>当定时器代码执行时间超过指定间隔,那么某些定时器代码就会被跳过(即后面的定时器代码不会被添加到队列中),前一个定时器代码执行完毕后,队列中的定时器代码立刻执行,各定时器之间的代码执行没有间隔。这时，需要使用链式<code>setTimeout</code>。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(function()&#123;</span><br><span class="line">    //要执行的代码 </span><br><span class="line">    setTimeout(arguments.callee,2000);                   </span><br><span class="line">&#125;,2000);</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javas">setTimeout(function(){
+    //要执行的代码 
+    setTimeout(arguments.callee,2000);                   
+},2000);
+</code></pre>
 <p>上面的代码就是用<code>setTimeout</code>来模拟<code>setInterval</code>,如果面试官问你怎么用<code>setTimeout</code>来解决定时器问题，可以用上面的代码来回答哦。</p>
 <p>如果要求在每隔一个固定的时间间隔后就精确地执行某动作，那么最好使用<code>setInterval</code>，</p>
 <p>比如函数执行的时间比较短的，用来实现动画效果。</p>
@@ -800,7 +841,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1249,7 +1290,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

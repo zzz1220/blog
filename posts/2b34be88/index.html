@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,javaScript">
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,JavaScript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -247,11 +247,11 @@
     <meta property="og:title" content="javaScript柯里化 | simmyo_z的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="javaScript"> 
+    <meta property="og:article:tag" content="JavaScript"> 
 
     
         <meta property="article:published_time" content="Thu Jan 11 2018 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/2b34be88/index.html",
     "headline": "javaScript柯里化",
     "datePublished": "Thu Jan 11 2018 00:00:00 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -292,7 +292,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",javaScriptblog 前端 javascript 算法 日志 css html",
+    "keywords": ",JavaScriptblog 前端 javascript 算法 日志 css html",
     "description": "",
 }
 </script>
@@ -453,7 +453,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javaScript/">javaScript</a>
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a>
     </ul>
     
 
@@ -534,7 +534,7 @@
     
 </div>
 <div style="padding-left:3rem;font-size: 1rem;">
-    👉👉本文共<span class="post-count">808</span>字📘
+    👉👉本文共<span class="post-count">800</span>字📘
     读完共需<span class="post-count">3</span>分钟⌚
 </div>
                 
@@ -551,11 +551,16 @@
 <p>柯里化允许我们把函数与传递给它的参数结合，产生一个新的函数。[引自《JavaScript语言精髓》，第43页 柯里化]</p>
 </blockquote>
 <p>通俗一点，就是之前的函数是这样的</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x,y</span>) &#123;</span><br><span class="line">	<span class="keyword">return</span> x+y;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">function add(x,y) {
+	return x+y;
+}
+</code></pre>
 <p>而柯里化后</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> curryAdd = <span class="title function_">curry</span>(add)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">var curryAdd = curry(add)
+</code></pre>
 <p>要计算的时候，就是</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">cuurryAdd</span>(<span class="number">1</span>)(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">cuurryAdd(1)(2)
+</code></pre>
 <p>看上去很不错吧，在函数式编程里面，简化了代码的复杂性，代码量变小，看起来更加优雅，可以达到延迟计算的方法，不断传入参数，最后执行；另外，根据网上的说法:</p>
 <blockquote>
 <p>函数柯里化允许和鼓励你分隔复杂功能变成更小更容易分析的部分。这些小的逻辑单元显然是更容易理解和测试的，然后你的应用就会变成干净而整洁的组合，由一些小单元组成的组合。</p>
@@ -563,11 +568,26 @@
 <p>关于这一点，我还在自己品味。是不是可以省略多参函数的参数，带入具体的函数以提供更细分的方法调用？</p>
 <h3 id="通用的柯里化方法："><a class="header-anchor" href="#通用的柯里化方法：">¶</a>通用的柯里化方法：</h3>
 <p>[代码引自《JavaScript: Novice to Ninja》，第319页 A General Curry Function]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">curry</span>(<span class="params">func</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> fixedArgs = [].<span class="property">slice</span>.<span class="title function_">call</span>(<span class="variable language_">arguments</span>,<span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    args = fixedArgs.<span class="title function_">concat</span>([].<span class="property">slice</span>.<span class="title function_">call</span>(<span class="variable language_">arguments</span>))</span><br><span class="line">    <span class="keyword">return</span> func.<span class="title function_">apply</span>(<span class="literal">null</span>, args);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">``</span><span class="string">`   </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">运行方法：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">divider</span>(<span class="params">x,y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x/y;</span><br><span class="line">&#125;</span><br><span class="line">reciprocal = <span class="title function_">curry</span>(divider,<span class="number">1</span>);</span><br><span class="line"><span class="title function_">reciprocal</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">function curry(func) {
+  var fixedArgs = [].slice.call(arguments,1);
+  return function() {
+    args = fixedArgs.concat([].slice.call(arguments))
+    return func.apply(null, args);
+  };
+}
+</code></pre>
+<p>运行方法：</p>
+<pre><code class="language-javascript">function divider(x,y) {
+  return x/y;
+}
+reciprocal = curry(divider,1);
+reciprocal(2);
+</code></pre>
 <p>执行reciprocal(2)相当于执行curry(divider,1)(2)。然后看curry方法通过[].slice方法去掉了传入的第一个参数，即function divider(x,y) {return x/y;}，之后保留了变量x=1并返回一个新的函数，这是一个匿名函数，同时传入变量y=2，这时fixedArgs.concat([].slice.call(arguments))将之前传入的变量x和现在传入的变量y重新组合成一个数组，最后执行函数divider，这时使用的参数是组合后的[1,2]。整个curry方法主要工作就是组织两次传入的参数，然后通过apply方式调用函数。</p>
 <p>最后，如果利用es6的新特性的话，就可以一行写出一个柯里化函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title function_">currySingle</span> = fn =&gt; (<span class="function">(<span class="params">limit</span>) =&gt;</span> judgeCurry = <span class="function">(<span class="params">...args</span>) =&gt;</span> args.<span class="property">length</span> &gt;= limit ? fn.<span class="title function_">apply</span>(<span class="literal">null</span>, args) : <span class="function">(<span class="params">...args2</span>) =&gt;</span> judgeCurry.<span class="title function_">apply</span>(<span class="literal">null</span>, args.<span class="title function_">concat</span>(args2)))(fn.<span class="property">length</span>)</span><br></pre></td></tr></table></figure>
-<p>摘自[一行写出javascript函数式编程中的curry] <a href="https://segmentfault.com/a/1190000008248646">https://segmentfault.com/a/1190000008248646</a></p>
+<pre><code class="language-javascript">var currySingle = fn =&gt; ((limit) =&gt; judgeCurry = (...args) =&gt; args.length &gt;= limit ? fn.apply(null, args) : (...args2) =&gt; judgeCurry.apply(null, args.concat(args2)))(fn.length)
+</code></pre>
+<p>摘自[一行写出javascript函数式编程中的curry] <a href="https://segmentfault.com/a/1190000008248646" target="_blank" rel="noopener">https://segmentfault.com/a/1190000008248646</a></p>
 
         
     
@@ -741,7 +761,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1190,7 +1210,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

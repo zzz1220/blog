@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,html">
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,html5">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -247,11 +247,11 @@
     <meta property="og:title" content="浏览器兼容性问题 | simmyo_z的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="html"> 
+    <meta property="og:article:tag" content="html5"> 
 
     
         <meta property="article:published_time" content="Wed Apr 07 2021 21:23:44 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:32:54 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/fe80343/index.html",
     "headline": "浏览器兼容性问题",
     "datePublished": "Wed Apr 07 2021 21:23:44 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:32:54 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -292,7 +292,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",htmlblog 前端 javascript 算法 日志 css html",
+    "keywords": ",html5blog 前端 javascript 算法 日志 css html",
     "description": "",
 }
 </script>
@@ -444,7 +444,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/html/">html</a>
+        <a class="post_tag-link" href="/tags/html5/">html5</a>
     </ul>
     
 
@@ -526,7 +526,7 @@
 </div>
 <div style="padding-left:3rem;font-size: 1rem;">
     👉👉本文共<span class="post-count">1.1k</span>字📘
-    读完共需<span class="post-count">5</span>分钟⌚
+    读完共需<span class="post-count">4</span>分钟⌚
 </div>
                 
 
@@ -544,25 +544,144 @@
 <li>浏览器强制用webkit内核<br>
 国内部分双核浏览器如：360极速浏览器、搜狗浏览器、百度浏览器等等，这些浏览器都号称拥有两个内核，用户可以根据需要自由切换。双核浏览器的2个内个分别为极速内核（webkit内核），兼容内核（trident内核）。使用极速内核浏览器会按照w3c的新标准渲染页面，其结果是渲染速度更快，规范性更好。而兼容内核也并非一无是处，国内很多政府、银行类网站在编写之初考虑了兼容旧版本ie的trident内核，其代码并非为w3c规范的标准，而是浏览器厂商自定义的模式，这类网站则必须使用兼容模式打开，如果使用极速模式打开就会产生布局错乱等问题。</li>
 </ol>
-<p>可以用下面的标签强制浏览器使用极速内核:<br>
-<meta name="renderer" content="webkit"></p>
-<p>也可以使用兼容的写法:<br>
-<meta name="renderer" content="webkit|ie-comp|ie-stand"><br>
-这里会根据先后顺序,启用支持的内核,不支持也不会</p>
+<p>可以用下面的标签强制浏览器使用极速内核:</p>
+<meta name="renderer" content="webkit">
+<p>也可以使用兼容的写法:</p>
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+这里会根据先后顺序,启用支持的内核,不支持也不会
 <ol start="3">
 <li>重置样式<br>
 不同的浏览器之间基本样式很不一样，比如IE浏览器使用ie盒子模型，现代浏览器大多使用标准盒子模型。他们之间的宽度计算很不一样。<br>
 这个时候就需要用reset.css重置一下样式了</li>
 </ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@charset</span> <span class="string">&quot;utf-8&quot;</span>;</span><br><span class="line"><span class="comment">/* CSS Document */</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">html</span>, <span class="selector-tag">body</span>, <span class="selector-tag">div</span>, <span class="selector-tag">span</span>, applet, <span class="selector-tag">object</span>, <span class="selector-tag">iframe</span>,</span><br><span class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span>, <span class="selector-tag">p</span>, <span class="selector-tag">blockquote</span>, pre,</span><br><span class="line"><span class="selector-tag">a</span>, <span class="selector-tag">abbr</span>, acronym, <span class="selector-tag">address</span>, big, <span class="selector-tag">cite</span>, <span class="selector-tag">code</span>,</span><br><span class="line"><span class="selector-tag">del</span>, <span class="selector-tag">dfn</span>, <span class="selector-tag">em</span>, <span class="attribute">font</span>, <span class="selector-tag">img</span>, <span class="selector-tag">ins</span>, <span class="selector-tag">kbd</span>, <span class="selector-tag">q</span>, s, <span class="selector-tag">samp</span>,</span><br><span class="line">small, strike, <span class="selector-tag">strong</span>, sub, <span class="selector-tag">sup</span>, tt, <span class="selector-tag">var</span>,</span><br><span class="line"><span class="selector-tag">b</span>, u, <span class="selector-tag">i</span>, center,</span><br><span class="line"><span class="selector-tag">dl</span>, <span class="selector-tag">dt</span>, <span class="selector-tag">dd</span>, <span class="selector-tag">ol</span>, <span class="selector-tag">ul</span>, <span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">fieldset</span>, <span class="selector-tag">form</span>, <span class="selector-tag">label</span>, <span class="selector-tag">legend</span>,</span><br><span class="line"><span class="selector-tag">table</span>, <span class="selector-tag">caption</span>, <span class="selector-tag">tbody</span>, <span class="selector-tag">tfoot</span>, <span class="selector-tag">thead</span>, <span class="selector-tag">tr</span>, <span class="selector-tag">th</span>, <span class="selector-tag">td</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">vertical-align</span>: baseline;</span><br><span class="line">    <span class="attribute">background</span>: transparent;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">ol</span>, <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">blockquote</span>, <span class="selector-tag">q</span> &#123;</span><br><span class="line">    <span class="attribute">quotes</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">blockquote</span><span class="selector-pseudo">:before</span>, <span class="selector-tag">blockquote</span><span class="selector-pseudo">:after</span>,</span><br><span class="line"><span class="selector-tag">q</span><span class="selector-pseudo">:before</span>, <span class="selector-tag">q</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">content</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* remember to define focus styles! */</span></span><br><span class="line"><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">    <span class="attribute">outline</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* remember to highlight inserts somehow! */</span></span><br><span class="line"><span class="selector-tag">ins</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">del</span> &#123;</span><br><span class="line">    <span class="attribute">text-decoration</span>: line-through;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* tables still need &#x27;cellspacing=&quot;0&quot;&#x27; in the markup */</span></span><br><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">    <span class="attribute">border-collapse</span>: collapse;</span><br><span class="line">    <span class="attribute">border-spacing</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 清除浮动 */</span></span><br><span class="line"><span class="selector-class">.clearfloat</span><span class="selector-pseudo">:after</span>&#123;<span class="attribute">display</span>:block;<span class="attribute">clear</span>:both;<span class="attribute">content</span>:<span class="string">&quot;&quot;</span>;<span class="attribute">visibility</span>:hidden; <span class="attribute">height</span>:<span class="number">0</span>;&#125; </span><br><span class="line"><span class="selector-class">.clearfloat</span>&#123;zoom:<span class="number">1</span>&#125; </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="language-css">@charset &quot;utf-8&quot;;
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing=&quot;0&quot;' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* 清除浮动 */
+.clearfloat:after{display:block;clear:both;content:&quot;&quot;;visibility:hidden; height:0;} 
+.clearfloat{zoom:1} 
+
+</code></pre>
 <ol start="4">
 <li>浏览器类型判断</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 浏览器类型判断</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">browserType</span> () &#123;</span><br><span class="line">    <span class="keyword">var</span> userAgent = navigator.<span class="property">userAgent</span>; <span class="comment">//取得浏览器的userAgent字符串</span></span><br><span class="line">    <span class="keyword">var</span> isOpera = userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Opera&quot;</span>) &gt; -<span class="number">1</span>; <span class="comment">//判断是否Opera浏览器</span></span><br><span class="line">    <span class="keyword">var</span> isIE = <span class="variable language_">window</span>.<span class="property">ActiveXObject</span> || <span class="string">&quot;ActiveXObject&quot;</span> <span class="keyword">in</span> <span class="variable language_">window</span></span><br><span class="line">    <span class="keyword">var</span> isEdge = userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Edge&quot;</span>) &gt; -<span class="number">1</span>; <span class="comment">//判断是否IE的Edge浏览器</span></span><br><span class="line">    <span class="keyword">var</span> isFF = userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Firefox&quot;</span>) &gt; -<span class="number">1</span>; <span class="comment">//判断是否Firefox浏览器</span></span><br><span class="line">    <span class="keyword">var</span> isSafari = userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Safari&quot;</span>) &gt; -<span class="number">1</span> &amp;&amp; userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Chrome&quot;</span>) == -<span class="number">1</span>; <span class="comment">//判断是否Safari浏览器</span></span><br><span class="line">    <span class="keyword">var</span> isChrome = userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Chrome&quot;</span>) &gt; -<span class="number">1</span> &amp;&amp; userAgent.<span class="title function_">indexOf</span>(<span class="string">&quot;Safari&quot;</span>) &gt; -<span class="number">1</span> &amp;&amp; !isEdge; <span class="comment">//判断Chrome浏览器</span></span><br><span class="line">    <span class="keyword">if</span> (isIE) &#123;</span><br><span class="line">        <span class="keyword">var</span> reIE = <span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&quot;MSIE (\\d+\\.\\d+);&quot;</span>);</span><br><span class="line">        reIE.<span class="title function_">test</span>(userAgent);</span><br><span class="line">        <span class="keyword">var</span> fIEVersion = <span class="built_in">parseFloat</span>(<span class="title class_">RegExp</span>[<span class="string">&quot;$1&quot;</span>]);</span><br><span class="line">        <span class="keyword">if</span> (userAgent.<span class="title function_">indexOf</span>(<span class="string">&#x27;MSIE 6.0&#x27;</span>) != -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IE6&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (fIEVersion == <span class="number">7</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IE7&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (fIEVersion == <span class="number">8</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IE8&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (fIEVersion == <span class="number">9</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IE9&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (fIEVersion == <span class="number">10</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IE10&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (userAgent.<span class="title function_">toLowerCase</span>().<span class="title function_">match</span>(<span class="regexp">/rv:([\d.]+)\) like gecko/</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;IE11&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span></span><br><span class="line">        &#125;<span class="comment">//IE版本过低</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isFF) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;FF&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isOpera) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Opera&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isSafari) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Safari&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isChrome) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Chrome&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isEdge) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Edge&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-JavaScript">// 浏览器类型判断
+function browserType () {
+    var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+    var isOpera = userAgent.indexOf(&quot;Opera&quot;) &gt; -1; //判断是否Opera浏览器
+    var isIE = window.ActiveXObject || &quot;ActiveXObject&quot; in window
+    var isEdge = userAgent.indexOf(&quot;Edge&quot;) &gt; -1; //判断是否IE的Edge浏览器
+    var isFF = userAgent.indexOf(&quot;Firefox&quot;) &gt; -1; //判断是否Firefox浏览器
+    var isSafari = userAgent.indexOf(&quot;Safari&quot;) &gt; -1 &amp;&amp; userAgent.indexOf(&quot;Chrome&quot;) == -1; //判断是否Safari浏览器
+    var isChrome = userAgent.indexOf(&quot;Chrome&quot;) &gt; -1 &amp;&amp; userAgent.indexOf(&quot;Safari&quot;) &gt; -1 &amp;&amp; !isEdge; //判断Chrome浏览器
+    if (isIE) {
+        var reIE = new RegExp(&quot;MSIE (\\d+\\.\\d+);&quot;);
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp[&quot;$1&quot;]);
+        if (userAgent.indexOf('MSIE 6.0') != -1) {
+            return &quot;IE6&quot;;
+        } else if (fIEVersion == 7) {
+            return &quot;IE7&quot;;
+        }
+        else if (fIEVersion == 8) {
+            return &quot;IE8&quot;;
+        }
+        else if (fIEVersion == 9) {
+            return &quot;IE9&quot;;
+        }
+        else if (fIEVersion == 10) {
+            return &quot;IE10&quot;;
+        }
+        else if (userAgent.toLowerCase().match(/rv:([\d.]+)\) like gecko/)) {
+            return &quot;IE11&quot;;
+        }
+        else {
+            return &quot;0&quot;
+        }//IE版本过低
+    }
+    if (isFF) {
+        return &quot;FF&quot;;
+    }
+    if (isOpera) {
+        return &quot;Opera&quot;;
+    }
+    if (isSafari) {
+        return &quot;Safari&quot;;
+    }
+    if (isChrome) {
+        return &quot;Chrome&quot;;
+    }
+    if (isEdge) {
+        return &quot;Edge&quot;;
+    }
+}
+</code></pre>
 <ol start="5">
 <li>html if 判断浏览器ie版本</li>
 </ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if !IE]&gt; 除IE外都可识别 &lt;!--&lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if IE]&gt; 所有的IE可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if IE 6]&gt; 仅IE6可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lt IE 6]&gt; IE6以及IE6以下版本可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if gte IE 6]&gt; IE6以及IE6以上版本可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if IE 7]&gt; 仅IE7可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lt IE 7]&gt; IE7以及IE7以下版本可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if gte IE 7]&gt; IE7以及IE7以上版本可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if IE 8]&gt; 仅IE8可识别 &lt;![endif]--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if IE 9]&gt; 仅IE9可识别 &lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="language-html">&lt;!--[if !IE]&gt; 除IE外都可识别 &lt;!--&lt;![endif]--&gt;
+&lt;!--[if IE]&gt; 所有的IE可识别 &lt;![endif]--&gt;
+&lt;!--[if IE 6]&gt; 仅IE6可识别 &lt;![endif]--&gt;
+&lt;!--[if lt IE 6]&gt; IE6以及IE6以下版本可识别 &lt;![endif]--&gt;
+&lt;!--[if gte IE 6]&gt; IE6以及IE6以上版本可识别 &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt; 仅IE7可识别 &lt;![endif]--&gt;
+&lt;!--[if lt IE 7]&gt; IE7以及IE7以下版本可识别 &lt;![endif]--&gt;
+&lt;!--[if gte IE 7]&gt; IE7以及IE7以上版本可识别 &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt; 仅IE8可识别 &lt;![endif]--&gt;
+&lt;!--[if IE 9]&gt; 仅IE9可识别 &lt;![endif]--&gt;
+</code></pre>
 <p>~~未完待续</p>
 
         
@@ -745,7 +864,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1194,7 +1313,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

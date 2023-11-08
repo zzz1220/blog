@@ -251,7 +251,7 @@
 
     
         <meta property="article:published_time" content="Sun Feb 25 2018 00:00:00 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/3705f364/index.html",
     "headline": "react组件编写非最佳实践",
     "datePublished": "Sun Feb 25 2018 00:00:00 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -534,7 +534,7 @@
     
 </div>
 <div style="padding-left:3rem;font-size: 1rem;">
-    👉👉本文共<span class="post-count">948</span>字📘
+    👉👉本文共<span class="post-count">920</span>字📘
     读完共需<span class="post-count">3</span>分钟⌚
 </div>
                 
@@ -550,19 +550,38 @@
 在给组件绑定类似<code>onClick</code>事件的时候,组件内定义的函数里面的this在执行的时候会变成全局，但是es6默认严格模式不允许全局，因此一般会用<code>bind</code>函数绑定this，当然，用箭头函数更简单，因为箭头函数会继承上下文的this。</p>
 <p>2 多用三目表达式和逻辑符号<br>
 因为jsx语法不支持写if语句,但是我们可以用三目表达式来代替<br>
-<code>&#123;a?&lt;A/&gt;:&lt;B/&gt;&#125;</code><br>
+<code>{a?&lt;A/&gt;:&lt;B/&gt;}</code><br>
 但是有时候我们只用判断一次,不需要false情况下做处理，可以用逻辑与<br>
-<code>!!a&amp;&amp;&lt;A/&gt; </code></p>
+<code>!!a&amp;&amp;&lt;A/&gt;</code></p>
 <p>3 利用解构赋值解决props过长导致的代码量过大<br>
 es6 里面在赋值新增加了解构赋值的语法，用起来很方便，例如：<br>
 <code>let [a, b, c] = [1, 2, 3];</code><br>
-<code>let &#123;a,b,c&#125; = &#123;4,5&#125;;\\ c的值是undefined</code><br>
+<code>let {a,b,c} = {4,5};\\ c的值是undefined</code><br>
 在组件里面可以<br>
-<code>const &#123;id,name,title,time&#125; = this.props</code><br>
+<code>const {id,name,title,time} = this.props</code><br>
 这样可以节约很多代码。</p>
 <p>4 用SFC（Stateless Functional Component）代替一般的纯组件的class写法</p>
 <p>sfc就是这样的代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">_handleClick</span>(suggestedUrl, onClick, event) =&gt; &#123;</span><br><span class="line">  event.<span class="title function_">preventDefault</span>();</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">RelatedSearch</span> = (<span class="params">&#123; relatedQueries, onClick &#125;</span>) =&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">section</span> <span class="attr">className</span>=<span class="string">&quot;related-search-container&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">h1</span> <span class="attr">className</span>=<span class="string">&quot;related-search-title&quot;</span>&gt;</span>Related Searches:<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">Layout</span> <span class="attr">x-small</span>=<span class="string">&#123;2&#125;</span> <span class="attr">small</span>=<span class="string">&#123;3&#125;</span> <span class="attr">medium</span>=<span class="string">&#123;4&#125;</span> <span class="attr">padded</span>=<span class="string">&#123;true&#125;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      &#123;relatedQueries.map((query, index) =&gt;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">Link</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">className</span>=<span class="string">&quot;related-search-link&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">          <span class="attr">onClick</span>=<span class="string">&#123;(event)</span> =&gt;</span></span></span><br><span class="line"><span class="language-xml">            _handleClick(query.searchQuery, onClick, event)&#125;</span></span><br><span class="line"><span class="language-xml">          key=&#123;index&#125;&gt;</span></span><br><span class="line"><span class="language-xml">          &#123;query.searchText&#125;</span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      )&#125;</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">Layout</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">section</span>&gt;</span></span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="title class_">RelatedSearch</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">const _handleClick(suggestedUrl, onClick, event) =&gt; {
+  event.preventDefault();
+};
+const RelatedSearch = ({ relatedQueries, onClick }) =&gt;
+  &lt;section className=&quot;related-search-container&quot;&gt;
+    &lt;h1 className=&quot;related-search-title&quot;&gt;Related Searches:&lt;/h1&gt;
+    &lt;Layout x-small={2} small={3} medium={4} padded={true}&gt;
+      {relatedQueries.map((query, index) =&gt;
+        &lt;Link
+          className=&quot;related-search-link&quot;
+          onClick={(event) =&gt;
+            _handleClick(query.searchQuery, onClick, event)}
+          key={index}&gt;
+          {query.searchText}
+        &lt;/Link&gt;
+      )}
+    &lt;/Layout&gt;
+  &lt;/section&gt;
+export default RelatedSearch;
+</code></pre>
 <p>参数就是props，这种写法比用class写法省略很多东西，没有构造函数，用箭头函数代替render(),因为现在都用redux管理状态，所以有很多纯组件，这种写法可以减少代码量。</p>
 <h2 id="思路篇"><a class="header-anchor" href="#思路篇">¶</a>思路篇</h2>
 <p>1 关于state和props的区别<br>
@@ -572,7 +591,7 @@ state :  一般用于组件内部的状态维护，更新组建内部的数据�
 <p>2 尽量是用纯组件，细化组件，提高组件复用<br>
 状态用redux处理，因为当组件更新时，如果组件的 props 和 state 都没发生改变，render 方法就不会触发，省去 Virtual DOM 的生成和比对过程，没状态的组件会提高性能。细化组件可以多次使用一个组件，因为react其实就像堆积木一样，组件就是每一块积木，积木越小越灵活。</p>
 <p>3 reducer要灵活<br>
-首先说一点reducer是实现(state, action) -&gt; newState的纯函数，所以不能有异步操作，需要异步的话<code>yarn add react-thunk</code>，请，当然也有其他的中间件，reducer是可以嵌套的，比如有studentlist的reducer，就可以写个student的函数，处理单个student的数据，在students函数里来处理所有的student的数据。这样避免单个reducer太长，逻辑混杂很难看的。reducer的编写比起组件来说要复杂一点我觉得，写法上也很考验js水平。关于reducer有文章可以参考<a href="https://www.jianshu.com/p/938f8121ba0f">Reducer 最佳实践，Redux 开发最重要的部分</a>。</p>
+首先说一点reducer是实现(state, action) -&gt; newState的纯函数，所以不能有异步操作，需要异步的话<code>yarn add react-thunk</code>，请，当然也有其他的中间件，reducer是可以嵌套的，比如有studentlist的reducer，就可以写个student的函数，处理单个student的数据，在students函数里来处理所有的student的数据。这样避免单个reducer太长，逻辑混杂很难看的。reducer的编写比起组件来说要复杂一点我觉得，写法上也很考验js水平。关于reducer有文章可以参考<a href="https://www.jianshu.com/p/938f8121ba0f" target="_blank" rel="noopener">Reducer 最佳实践，Redux 开发最重要的部分</a>。</p>
 <p>未完待续–还要讲的有高阶组件，中间件，异步操作等。</p>
 
         
@@ -755,7 +774,7 @@ state :  一般用于组件内部的状态维护，更新组建内部的数据�
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1204,7 +1223,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }

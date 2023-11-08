@@ -61,7 +61,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,javaScript,promise">
+    <meta name="keywords" content="blog 前端 javascript 算法 日志 css html,promise,JavaScript">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -247,11 +247,11 @@
     <meta property="og:title" content="javaScript异步操作进化曲 | simmyo_z的博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content>
-    <meta property="og:article:tag" content="javaScript"> <meta property="og:article:tag" content="promise"> 
+    <meta property="og:article:tag" content="promise"> <meta property="og:article:tag" content="JavaScript"> 
 
     
         <meta property="article:published_time" content="Wed Jul 11 2018 21:54:30 GMT+0800">
-        <meta property="article:modified_time" content="Tue Nov 07 2023 14:53:35 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 08 2023 15:30:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -274,7 +274,7 @@
     "mainEntityOfPage": "https://zzz1220.github.io/posts/2b77e8c0/index.html",
     "headline": "javaScript异步操作进化曲",
     "datePublished": "Wed Jul 11 2018 21:54:30 GMT+0800",
-    "dateModified": "Tue Nov 07 2023 14:53:35 GMT+0800",
+    "dateModified": "Wed Nov 08 2023 15:30:23 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "zzz1220",
@@ -292,7 +292,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",javaScript,promiseblog 前端 javascript 算法 日志 css html",
+    "keywords": ",promise,JavaScriptblog 前端 javascript 算法 日志 css html",
     "description": "",
 }
 </script>
@@ -453,7 +453,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/javaScript/">javaScript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/promise/">promise</a>
+        <a class="post_tag-link" href="/tags/JavaScript/">JavaScript</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/promise/">promise</a>
     </ul>
     
 
@@ -534,8 +534,8 @@
     
 </div>
 <div style="padding-left:3rem;font-size: 1rem;">
-    👉👉本文共<span class="post-count">1k</span>字📘
-    读完共需<span class="post-count">4</span>分钟⌚
+    👉👉本文共<span class="post-count">987</span>字📘
+    读完共需<span class="post-count">3</span>分钟⌚
 </div>
                 
 
@@ -543,7 +543,7 @@
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
         <blockquote>
-<p>老生常谈，今天也来总结下<code>javaScript</code> 中异步操作的历史。</p>
+<p>老生常谈，今天也来总结下<code>JavaScript</code> 中异步操作的历史。</p>
 </blockquote>
 <p><em>TL;DR</em><br>
 1.同步和异步区别<br>
@@ -554,18 +554,38 @@
 <p>异步简单来说就是做一件事时，做到一半可能需要等待系统或服务处理之后才会得到响应和结果，此时可以转去做另一件事，等到获得响应之后在去执行剩下一半的事情。反之同步就是一直等到响应然后接着做事，中间不会跳去做别的事。</p>
 <h2 id="回调函数"><a class="header-anchor" href="#回调函数">¶</a>回调函数</h2>
 <p>就是我们经常用到的回调函数，最开始用 ajax 的时候，会写出下面样子的代码。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&quot;path&quot;</span>,</span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">$.ajax({
+  url: &quot;path&quot;,
+  success: function () {
+    // do something
+  },
+});
+</code></pre>
 <p>缺点是读起来跳跃性太强，不好跟踪代码。而且在前后依赖的时候，形成回调地狱，一旦修改一个，嵌套的都要改。另外就是无法合并多个异步代码。</p>
 <h2 id="简单明了的promise函数"><a class="header-anchor" href="#简单明了的promise函数">¶</a>简单明了的<code>promise</code>函数</h2>
 <p>Promise 的引入就解决了以上这些问题,首先来看下 Promise 的简单用法：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="keyword">function</span>(<span class="params">resolve, reject</span>) &#123;</span><br><span class="line">    <span class="title function_">resolve</span>(<span class="number">100</span>)；</span><br><span class="line">&#125;)；</span><br><span class="line"></span><br><span class="line">p.<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;data&#x27;</span>, data);</span><br><span class="line">&#125;, <span class="keyword">function</span>(<span class="params">err</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;err&#x27;</span>, err);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">let p = new Promise(function(resolve, reject) {
+    resolve(100)；
+})；
+
+p.then(function(data) {
+    console.log('data', data);
+}, function(err) {
+    console.log('err', err);
+});
+
+</code></pre>
 <p>可以看到 Promis 通过 then 的链式调用解决了嵌套回调的问题，在用法上 Promise 的构造函数会接受一个 executor 函数，这个函数带有两个参数 resolve 和 reject，两个参数背后其实就是两个函数，而通过 Promise 构造函数创建出来的对象会保存一个 status 属性，resolve 会做的事就是将这个属性从初始化的 pending 转为 resolved，而 reject 则是转为 rejected，同时两个函数都可以接受一个参数，作为之后 then 中回调函数的参数传入，那么在 then 方法中我们可以看到它接收两个参数，第一个就是成功 resolved 之后会调用的回调函数，第二个就是 rejected 的回调函数。<br>
 这里注意的是，只要状态转为 resolved 或 rejected 之中的其中一个，那么当前 promise 对象就不能再转变状态了。之后不管调 resolve 还是 reject 都会被忽略。<br>
 另外，上面所说 Promise 是可以支持链式调用的，所以 then 是可以多次调用的，但是因为刚刚所说状态不可转变的问题，所以链式调用每次 then 返回的不是当前的 Promise 对象而是一个新的 Promise 对象，那么第 2 次 then 的状态又是怎么决定的呢，第一次 then 中无论是成功的回调还是失败的回调只要返回了结果就会走下一个 then 中的成功，如果有错误走下一个 then 的失败。</p>
 <p>此外，<code>promise</code> 还有：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>();</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">race</span>();</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>();</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">reject</span>();</span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">Promise.all();
+Promise.race();
+Promise.resolve();
+Promise.reject();
+</code></pre>
 <p>这些 api<br>
-<a href="http://es6.ruanyifeng.com/#docs/promise">Promise 对象</a>。</p>
+<a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank" rel="noopener">Promise 对象</a>。</p>
 <p>关于 promise 的实现，可以看下 PromiseA+的原则。下面是一个实现：</p>
 <!-- Get UTF-8 Size (ANSI C) -->
 <!-- Begin -->
@@ -578,9 +598,32 @@
 并发执行异步，在同一时刻同步返回结果 Promise.all<br>
 返回值的问题<br>
 可以实现代码的 try/catch;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> bluebird = <span class="built_in">require</span>(<span class="string">&#x27;bluebird&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">let</span> read = bluebird.<span class="title function_">promisify</span>(fs.<span class="property">readFile</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用async来修饰函数，aysnc需要配await, await只能接promise</span></span><br><span class="line"><span class="comment">// async和await(语法糖) === co + generator</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">r</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> content1 = <span class="keyword">await</span> <span class="title function_">read</span>(<span class="string">&#x27;./2.promise/100.txt&#x27;</span>, <span class="string">&#x27;utf8&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> content2 = <span class="keyword">await</span> <span class="title function_">read</span>(content1, <span class="string">&#x27;utf8&#x27;</span>);</span><br><span class="line">        <span class="keyword">return</span> content2;</span><br><span class="line">    &#125; <span class="keyword">catch</span>(e) &#123; <span class="comment">// 如果出错会catch</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;err&#x27;</span>, e)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// async函数返回的是promise</span></span><br><span class="line"><span class="title function_">r</span>().<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">data</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;flag&#x27;</span>, data);</span><br><span class="line">&#125;, <span class="keyword">function</span>(<span class="params">err</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err);<span class="string">`</span></span><br><span class="line"><span class="string">&#125;)</span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+<pre><code class="language-javascript">let bluebird = require('bluebird');
+let fs = require('fs');
+let read = bluebird.promisify(fs.readFile);
+
+// 用async来修饰函数，aysnc需要配await, await只能接promise
+// async和await(语法糖) === co + generator
+async function r() {
+    try{
+        let content1 = await read('./2.promise/100.txt', 'utf8');
+        let content2 = await read(content1, 'utf8');
+        return content2;
+    } catch(e) { // 如果出错会catch
+        console.log('err', e)
+    }
+}
+
+// async函数返回的是promise
+r().then(function(data) {
+    console.log('flag', data);
+}, function(err) {
+    console.log(err);`
+})
+
+</code></pre>
 <p>此外，还有 Generator 实现的，利用<code>co</code>库实现 next 方法嵌套取值执行，本人很少用到，就不详细介绍了。<br>
-可以看<a href="http://es6.ruanyifeng.com/#docs/generator-async">Generator 函数的异步应用</a></p>
+可以看<a href="http://es6.ruanyifeng.com/#docs/generator-async" target="_blank" rel="noopener">Generator 函数的异步应用</a></p>
 
         
     
@@ -762,7 +805,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/javaScript/">javaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/code/">code<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/tool/">tool<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -1211,7 +1254,7 @@ console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viose
             </div>
             <script id="dsq-count-scr" src="//zzz1220-1.disqus.com/count.js" async></script>
         <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1699423878297')
+  navigator.serviceWorker.register('/sw.js?t=1699428807307')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
