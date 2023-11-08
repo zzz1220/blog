@@ -1,40 +1,48 @@
-name: Deployment
+name: Pages
+
 on:
   push:
     branches:
-      - master
+      - master # default branch
 
 jobs:
-  deployment:
+  build:
     runs-on: ubuntu-latest
-    name: Deployment
-
     steps:
-      # - name: Check Out
-      #   uses: actions/checkout@v3
-
-      # - name: Clone Repo
-      #   uses: actions/checkout@v3
-      #   with:
-      #     repository: Username/Repository
-      #     path: .deploy_git
-
-      # - name: Setup Node
-      #   uses: actions/setup-node@v3
-      #   with:
-      #     node-version: 13
-
-      # - name: Setup Git
-      #   run: |
-      #     git config --global user.name "zzz1220"
-      #     git config --global user.email "13005465120@163.com"
-
-      # - name: Setup SSH Key
-      #   run: |
-      #     mkdir -p ~/.ssh
-      #     echo "${{ secrets.MY_BLOG_DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-      #     chmod 600 ~/.ssh/id_ed25519
-
-      - name: Test
-        run: |
-          echo "this is a test step"
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          # If your repository depends on submodule, please see: https://github.com/actions/checkout
+          submodules: recursive
+      - name: Use Node.js 13.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '13'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
