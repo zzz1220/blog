@@ -37,7 +37,7 @@
   },
   "scripts": {
     "start": "hexo s",
-    "build": "hexo generator",
+    "build": "hexo generate",
     "new": "hexo new $*",
     "deploy": "hexo deploy -g",
     "clean": "hexo clean",
