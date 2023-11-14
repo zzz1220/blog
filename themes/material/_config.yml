@@ -304,7 +304,7 @@ Available value:
   google
   # baidu | google | cnzz
 analytics:
-  google_site_id: UA-145111272-1
+  google_site_id: G-3QWPQ8Z33F
   baidu_site_id:
   cnzz_site_id:
 
