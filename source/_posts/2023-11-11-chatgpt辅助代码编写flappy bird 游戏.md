@@ -1,5 +1,5 @@
 ---
-title: chatgpt辅助代码编写
+title: chatgpt辅助代码编写flappy bird 游戏
 date: 2023-11-11 14:13:18
 tags: chatgpt three.js
 ---
@@ -83,6 +83,14 @@ animate();
 
 
 可以看到，在这种简单场景下，chatgpt 可以做到提出思路和代码，但是更加复杂的场景，chatgpt 却只能给出大概的思路，并且往往是一些正确的废话，不知道是不是我提问的不够详细，还有待观察，有时换了一些关键词，回答就会有很大的变化。
+
+
+# 结论
+
+作为一个three js新手，仅仅在看了半天文档的情况下，利用chatgpt 的回答，就几乎很完整的开发出了一个小游戏，可见chatgpt 能给普通开发人带来多大的好处，不懂得问就完了。  当然不是说chatgpt 回答的一定就对，在更加细分和复杂的领域，还要靠自己去验证和探索，这里只实验chatgpt 的辅助功能，AI 完全代替开发人员还早着呢。
+
+这里贴个demo 地址
+https://zzz1220.github.io/threejs-flappybird/
 
 
 # 是否需要chatgpt4
