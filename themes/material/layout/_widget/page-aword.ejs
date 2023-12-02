@@ -1,0 +1,36 @@
+<style>
+    .material-aword_container {
+        padding: 2rem 4rem;
+    }
+
+    .material-aword_head {
+        text-align: center;
+    }
+
+    .material-aword_container ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .material-aword_container li {
+        margin-bottom: 8px;
+        padding: 8px;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+
+<div class="material-aword_container">
+    <h4 class="material-aword_head">零碎想法</h4>
+    <ul class="material-post mdl-grid">
+        <% if (site.data.aword) { %>
+            <% for (var i in site.data.aword) { %>
+                <li>
+                    <%= site.data.aword[i].word %>
+                </li>
+                <% } %>
+                    <% } %>
+    </ul>
+</div>

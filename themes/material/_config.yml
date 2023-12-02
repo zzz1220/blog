@@ -237,6 +237,10 @@ sidebar:
     链接:
       link: "/links"
       icon: linkify
+      divider: false  
+    一言:
+      link: "/aword"
+      icon: favorite
       divider: true  
   article_num:
     use: true

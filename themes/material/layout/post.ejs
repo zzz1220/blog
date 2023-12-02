@@ -12,6 +12,10 @@
     <!-- Single Links Page -->
     <%- partial('_widget/page-links') %>
 
+<% } else if(page.layout === 'aword') { %>
+        <!-- Single aword Page -->
+    <%- partial('_widget/page-aword') %>
+
 <% } else if(page.layout === 'timeline') { %>
     <!-- Single Timeline Page -->
     <%- partial('_widget/page-timeline') %>
