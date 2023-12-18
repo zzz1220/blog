@@ -21,3 +21,9 @@
 从模版创建:
   word: '不要再用yarn create vite了, 使用npx degit 从社区模版拉取，可以节省很多时间。'
   timestamp: 1702001867130 
+
+英语短句:
+  word: 'The quick brown fox jumps over the lazy dog. 只有一句但是包含所有的字母。'
+  timestamp: 1702897051398 
+  
+  
