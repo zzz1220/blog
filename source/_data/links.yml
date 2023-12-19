@@ -87,6 +87,12 @@ ColorHunt:
     link: https://colorhunt.co/
     avatar: /links/logo/colorhunt.png
     descr: "预设色彩搭配"  
+
+type-challenges:
+    link: https://github.com/type-challenges/type-challenges
+    avatar: https://github.com/type-challenges/type-challenges/blob/main/screenshots/logo.svg
+    descr: "类型体操练习题"
+    
    
    
     
