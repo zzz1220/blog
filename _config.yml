@@ -6,7 +6,7 @@
 title: simmyo_z的博客
 subtitle:
 description:
-keywords: 博客 前端 bolg javascript web
+keywords: 博客 前端 bolg javascript web 编程 code
 author: zzz1220
 language: zh-CN
 timezone: Asia/Shanghai
@@ -188,3 +188,9 @@ pwa:
       - pattern: !!js/regexp /\//
         strategy: networkFirst
   priority: 5
+
+
+  nofollow:
+    enable: true # 是否启用
+    field: site # 插件的处理范围，默认是 site，可选 post
+

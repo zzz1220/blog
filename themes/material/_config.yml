@@ -283,8 +283,8 @@ comment:
   valine_guest_info: nick,mail,link #valine comment header info
   gitalk_repo: gitTalkBuck
   gitalk_owner: zzz1220
-  gitalk_client_id: 7047f32466c59bed6274
-  gitalk_client_secret: 50030c1dc4654f2f10f8df23b3a084692a8ce248
+  gitalk_client_id: 0ea80b70af391ac08bb6
+  gitalk_client_secret: fbb1336799b94772946bcbc08b55a0b0cee162dc
   wildfire_database_provider: firebase # firebase or wilddog
   wildfire_wilddog_site_id:
   wildfire_firebase_api_key:
