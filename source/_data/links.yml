@@ -96,6 +96,15 @@ type-challenges:
 cva:
     link: https://cva.style/docs
     descr: "一个方便构建react组件样式的工具库"
+
+radix-ui:
+    link: https://www.radix-ui.com/
+    descr: "一个强大的 react 组件库"
+
+pnpm:
+    link: https://pnpm.io/
+    avatar: https://pnpm.io/zh/img/pnpm-no-name-with-frame.svg
+    desrc: "npm 包管理器"
     
    
    
