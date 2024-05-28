@@ -93,6 +93,10 @@ type-challenges:
     avatar: https://github.com/type-challenges/type-challenges/blob/main/screenshots/logo.svg
     descr: "类型体操练习题"
     
+cva:
+    link: https://cva.style/docs
+    descr: "一个方便构建react组件样式的工具库"
+    
    
    
     
