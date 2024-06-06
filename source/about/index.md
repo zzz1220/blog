@@ -24,6 +24,3 @@ date: 2018-05-03 21:10:26
 {% img image /about/bird.png 220 500 '"首页" "alt text"' %}    
 
 
-### [WIP--10%] dota2-status
-> 为了熟悉最新的react生态(zustand, swr)的dota2 战绩查询站，{% link 地址 https://zzz1220.github.io/demo-react-dota2-status/ [external] 地址 %}
-
